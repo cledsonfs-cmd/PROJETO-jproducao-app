@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { MateriaPrimasRoutingModule } from './materia-primas-routing.module';
 import { MateriaPrimasFormComponent } from './materia-primas-form/materia-primas-form.component';
@@ -11,7 +12,8 @@ import { MateriaPrimasFormComponent } from './materia-primas-form/materia-primas
   ],
   imports: [
     CommonModule,
-    MateriaPrimasRoutingModule
+    MateriaPrimasRoutingModule,
+    FormsModule
   ],
   exports: [
     MateriaPrimasFormComponent

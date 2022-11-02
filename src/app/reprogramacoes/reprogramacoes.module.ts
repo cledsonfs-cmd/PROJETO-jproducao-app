@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { ReprogramacoesRoutingModule } from './reprogramacoes-routing.module';
 import { ReprogramacoesFormComponent } from './reprogramacoes-form/reprogramacoes-form.component';
@@ -11,7 +12,8 @@ import { ReprogramacoesFormComponent } from './reprogramacoes-form/reprogramacoe
   ],
   imports: [
     CommonModule,
-    ReprogramacoesRoutingModule
+    ReprogramacoesRoutingModule,
+    FormsModule
   ],
   exports: [
     ReprogramacoesFormComponent

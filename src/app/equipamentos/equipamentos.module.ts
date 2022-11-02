@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { EquipamentosRoutingModule } from './equipamentos-routing.module';
 import { EquipamentosFormComponent } from './equipamentos-form/equipamentos-form.component';
@@ -11,7 +12,8 @@ import { EquipamentosFormComponent } from './equipamentos-form/equipamentos-form
   ],
   imports: [
     CommonModule,
-    EquipamentosRoutingModule
+    EquipamentosRoutingModule,
+    FormsModule
   ],
   exports: [
     EquipamentosFormComponent

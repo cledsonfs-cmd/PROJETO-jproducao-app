@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { LinhaProducoesRoutingModule } from './linha-producoes-routing.module';
 import { LinhaProducoesFormComponent } from './linha-producoes-form/linha-producoes-form.component';
@@ -11,7 +12,8 @@ import { LinhaProducoesFormComponent } from './linha-producoes-form/linha-produc
   ],
   imports: [
     CommonModule,
-    LinhaProducoesRoutingModule
+    LinhaProducoesRoutingModule,
+    FormsModule
   ],
   exports: [
     LinhaProducoesFormComponent

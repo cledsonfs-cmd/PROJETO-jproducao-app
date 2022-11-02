@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { ElementosRoutingModule } from './elementos-routing.module';
 import { ElementosFormComponent } from './elementos-form/elementos-form.component';
@@ -11,7 +12,8 @@ import { ElementosFormComponent } from './elementos-form/elementos-form.componen
   ],
   imports: [
     CommonModule,
-    ElementosRoutingModule
+    ElementosRoutingModule,
+    FormsModule
   ],
   exports: [
     ElementosFormComponent

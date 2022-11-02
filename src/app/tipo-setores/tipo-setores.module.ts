@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { TipoSetoresRoutingModule } from './tipo-setores-routing.module';
 import { TipoSetoresFormComponent } from './tipo-setores-form/tipo-setores-form.component';
@@ -11,7 +12,8 @@ import { TipoSetoresFormComponent } from './tipo-setores-form/tipo-setores-form.
   ],
   imports: [
     CommonModule,
-    TipoSetoresRoutingModule
+    TipoSetoresRoutingModule,
+    FormsModule
   ],
   exports: [
     TipoSetoresFormComponent

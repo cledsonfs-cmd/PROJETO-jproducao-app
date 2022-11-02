@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { PerfisRoutingModule } from './perfis-routing.module';
 import { PerfisFormComponent } from './perfis-form/perfis-form.component';
@@ -11,7 +12,8 @@ import { PerfisFormComponent } from './perfis-form/perfis-form.component';
   ],
   imports: [
     CommonModule,
-    PerfisRoutingModule
+    PerfisRoutingModule,
+    FormsModule
   ],
   exports: [
     PerfisFormComponent

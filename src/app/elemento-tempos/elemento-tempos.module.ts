@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { ElementoTemposRoutingModule } from './elemento-tempos-routing.module';
 import { ElementoTemposFormComponent } from './elemento-tempos-form/elemento-tempos-form.component';
@@ -11,7 +12,8 @@ import { ElementoTemposFormComponent } from './elemento-tempos-form/elemento-tem
   ],
   imports: [
     CommonModule,
-    ElementoTemposRoutingModule
+    ElementoTemposRoutingModule,
+    FormsModule
   ],
   exports: [
     ElementoTemposFormComponent

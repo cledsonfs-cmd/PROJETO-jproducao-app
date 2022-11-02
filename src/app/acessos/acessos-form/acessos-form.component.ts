@@ -9,7 +9,11 @@ import { Acesso } from '../acesso'
 })
 export class AcessosFormComponent implements OnInit {
 
-  constructor() { }
+  acesso: Acesso;
+
+  constructor() { 
+    this.acesso = new Acesso();
+  }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { FaturamentosRoutingModule } from './faturamentos-routing.module';
 import { FaturamentosFormComponent } from './faturamentos-form/faturamentos-form.component';
@@ -11,7 +12,8 @@ import { FaturamentosFormComponent } from './faturamentos-form/faturamentos-form
   ],
   imports: [
     CommonModule,
-    FaturamentosRoutingModule
+    FaturamentosRoutingModule,
+    FormsModule
   ],
   exports: [
     FaturamentosFormComponent

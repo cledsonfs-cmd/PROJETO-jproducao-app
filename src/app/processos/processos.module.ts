@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { ProcessosRoutingModule } from './processos-routing.module';
 import { ProcessosFormComponent } from './processos-form/processos-form.component';
@@ -11,7 +12,8 @@ import { ProcessosFormComponent } from './processos-form/processos-form.componen
   ],
   imports: [
     CommonModule,
-    ProcessosRoutingModule
+    ProcessosRoutingModule,
+    FormsModule
   ],
   exports: [
     ProcessosFormComponent

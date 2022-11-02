@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { SetorPerdasRoutingModule } from './setor-perdas-routing.module';
 import { SetorPerdasFormComponent } from './setor-perdas-form/setor-perdas-form.component';
@@ -11,7 +12,8 @@ import { SetorPerdasFormComponent } from './setor-perdas-form/setor-perdas-form.
   ],
   imports: [
     CommonModule,
-    SetorPerdasRoutingModule
+    SetorPerdasRoutingModule,
+    FormsModule
   ],
   exports: [
     SetorPerdasFormComponent

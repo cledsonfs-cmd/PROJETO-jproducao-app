@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { AlmoxarifadosRoutingModule } from './almoxarifados-routing.module';
 import { AlmoxarifadosFormComponent } from './almoxarifados-form/almoxarifados-form.component';
@@ -11,7 +12,8 @@ import { AlmoxarifadosFormComponent } from './almoxarifados-form/almoxarifados-f
   ],
   imports: [
     CommonModule,
-    AlmoxarifadosRoutingModule
+    AlmoxarifadosRoutingModule,
+    FormsModule
   ]
   ,
   exports: [

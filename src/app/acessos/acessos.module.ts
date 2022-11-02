@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { AcessosRoutingModule } from './acessos-routing.module';
 import { AcessosFormComponent } from './acessos-form/acessos-form.component';
@@ -11,7 +12,8 @@ import { AcessosFormComponent } from './acessos-form/acessos-form.component';
   ],
   imports: [
     CommonModule,
-    AcessosRoutingModule
+    AcessosRoutingModule,
+    FormsModule
   ],
   exports: [
     AcessosFormComponent

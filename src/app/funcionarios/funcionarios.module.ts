@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { FuncionariosRoutingModule } from './funcionarios-routing.module';
 import { FuncionariosFormComponent } from './funcionarios-form/funcionarios-form.component';
@@ -11,7 +12,8 @@ import { FuncionariosFormComponent } from './funcionarios-form/funcionarios-form
   ],
   imports: [
     CommonModule,
-    FuncionariosRoutingModule
+    FuncionariosRoutingModule,
+    FormsModule
   ],
   exports: [
     FuncionariosFormComponent

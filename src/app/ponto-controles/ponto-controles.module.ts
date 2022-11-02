@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { PontoControlesRoutingModule } from './ponto-controles-routing.module';
 import { PontoControlesFormComponent } from './ponto-controles-form/ponto-controles-form.component';
@@ -11,7 +12,8 @@ import { PontoControlesFormComponent } from './ponto-controles-form/ponto-contro
   ],
   imports: [
     CommonModule,
-    PontoControlesRoutingModule
+    PontoControlesRoutingModule,
+    FormsModule
   ],
   exports: [
     PontoControlesFormComponent

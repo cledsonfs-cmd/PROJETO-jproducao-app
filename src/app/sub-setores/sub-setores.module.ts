@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { SubSetoresRoutingModule } from './sub-setores-routing.module';
 import { SubSetoresFormComponent } from './sub-setores-form/sub-setores-form.component';
@@ -11,7 +12,8 @@ import { SubSetoresFormComponent } from './sub-setores-form/sub-setores-form.com
   ],
   imports: [
     CommonModule,
-    SubSetoresRoutingModule
+    SubSetoresRoutingModule,
+    FormsModule
   ],
   exports: [
     SubSetoresFormComponent

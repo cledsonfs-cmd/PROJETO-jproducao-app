@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { LotesRoutingModule } from './lotes-routing.module';
 import { LotesFormComponent } from './lotes-form/lotes-form.component';
@@ -11,7 +12,8 @@ import { LotesFormComponent } from './lotes-form/lotes-form.component';
   ],
   imports: [
     CommonModule,
-    LotesRoutingModule
+    LotesRoutingModule,
+    FormsModule
   ],
   exports: [
     LotesFormComponent

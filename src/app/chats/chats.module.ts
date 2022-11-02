@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { ChatsRoutingModule } from './chats-routing.module';
 import { ChatsFormComponent } from './chats-form/chats-form.component';
@@ -11,7 +12,8 @@ import { ChatsFormComponent } from './chats-form/chats-form.component';
   ],
   imports: [
     CommonModule,
-    ChatsRoutingModule
+    ChatsRoutingModule,
+    FormsModule
   ],
   exports: [
     ChatsFormComponent

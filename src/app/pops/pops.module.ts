@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { PopsRoutingModule } from './pops-routing.module';
 import { PopsFormComponent } from './pops-form/pops-form.component';
@@ -11,7 +12,8 @@ import { PopsFormComponent } from './pops-form/pops-form.component';
   ],
   imports: [
     CommonModule,
-    PopsRoutingModule
+    PopsRoutingModule,
+    FormsModule
   ],
   exports: [
     PopsFormComponent

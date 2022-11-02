@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { MotivoPerdasRoutingModule } from './motivo-perdas-routing.module';
 import { MotivoPerdasFormComponent } from './motivo-perdas-form/motivo-perdas-form.component';
@@ -11,7 +12,8 @@ import { MotivoPerdasFormComponent } from './motivo-perdas-form/motivo-perdas-fo
   ],
   imports: [
     CommonModule,
-    MotivoPerdasRoutingModule
+    MotivoPerdasRoutingModule,
+    FormsModule
   ],
   exports: [
     MotivoPerdasFormComponent

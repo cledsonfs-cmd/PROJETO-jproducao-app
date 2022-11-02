@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { CarteirasRoutingModule } from './carteiras-routing.module';
 import { CarteirasFormComponent } from './carteiras-form/carteiras-form.component';
@@ -11,7 +12,8 @@ import { CarteirasFormComponent } from './carteiras-form/carteiras-form.componen
   ],
   imports: [
     CommonModule,
-    CarteirasRoutingModule
+    CarteirasRoutingModule,
+    FormsModule
   ],
   exports: [
     CarteirasFormComponent
