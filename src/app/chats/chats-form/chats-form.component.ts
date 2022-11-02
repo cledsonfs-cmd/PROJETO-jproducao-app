@@ -9,9 +9,16 @@ import { Chat } from '../chat'
 })
 export class ChatsFormComponent implements OnInit {
 
-  constructor() { }
+  chat: Chat;
+
+  constructor() { 
+    this.chat = new Chat();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

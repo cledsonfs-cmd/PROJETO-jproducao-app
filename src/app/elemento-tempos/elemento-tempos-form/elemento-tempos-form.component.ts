@@ -9,9 +9,16 @@ import { ElementoTempo } from '../elemento-tempo'
 })
 export class ElementoTemposFormComponent implements OnInit {
 
-  constructor() { }
+  elementoTempo: ElementoTempo;
+
+  constructor() { 
+    this.elementoTempo = new ElementoTempo();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

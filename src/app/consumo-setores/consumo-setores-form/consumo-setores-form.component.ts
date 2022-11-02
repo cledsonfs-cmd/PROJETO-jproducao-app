@@ -9,9 +9,16 @@ import { ConsumoSetor } from '../consumo-setor'
 })
 export class ConsumoSetoresFormComponent implements OnInit {
 
-  constructor() { }
+  consumoSetor: ConsumoSetor;
+
+  constructor() { 
+    this.consumoSetor = new ConsumoSetor();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

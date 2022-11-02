@@ -9,9 +9,16 @@ import { Almoxarifado } from '../almoxarifado'
 })
 export class AlmoxarifadosFormComponent implements OnInit {
 
-  constructor() { }
+  almoxarifado: Almoxarifado;
+
+  constructor() { 
+    this.almoxarifado = new Almoxarifado();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

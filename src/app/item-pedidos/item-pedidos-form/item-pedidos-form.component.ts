@@ -9,9 +9,16 @@ import { ItemPedido } from '../item-pedido'
 })
 export class ItemPedidosFormComponent implements OnInit {
 
-  constructor() { }
+  itemPedido: ItemPedido;
+
+  constructor() { 
+    this.itemPedido = new ItemPedido();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

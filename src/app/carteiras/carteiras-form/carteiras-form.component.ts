@@ -9,9 +9,16 @@ import { Carteira } from '../carteira'
 })
 export class CarteirasFormComponent implements OnInit {
 
-  constructor() { }
+  carteira: Carteira;
+
+  constructor() { 
+    this.carteira = new Carteira();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

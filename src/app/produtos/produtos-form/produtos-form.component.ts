@@ -8,10 +8,16 @@ import { Produto } from '../produto'
   styleUrls: ['./produtos-form.component.css']
 })
 export class ProdutosFormComponent implements OnInit {
+  produto: Produto;
 
-  constructor() { }
+  constructor() { 
+    this.produto = new Produto;
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

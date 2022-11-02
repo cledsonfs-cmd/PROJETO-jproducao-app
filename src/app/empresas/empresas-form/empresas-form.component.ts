@@ -9,9 +9,16 @@ import { Empresa } from '../empresa'
 })
 export class EmpresasFormComponent implements OnInit {
 
-  constructor() { }
+  empresa: Empresa;
+
+  constructor() { 
+    this.empresa = new Empresa();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

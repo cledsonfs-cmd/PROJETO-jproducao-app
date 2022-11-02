@@ -8,10 +8,16 @@ import { Procedimento } from '../procedimento'
   styleUrls: ['./procedimentos-form.component.css']
 })
 export class ProcedimentosFormComponent implements OnInit {
+  procedimento: Procedimento;
 
-  constructor() { }
+  constructor() { 
+    this.procedimento = new Procedimento();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

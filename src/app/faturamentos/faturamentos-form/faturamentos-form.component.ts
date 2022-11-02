@@ -9,9 +9,16 @@ import { Faturamento } from '../faturamento'
 })
 export class FaturamentosFormComponent implements OnInit {
 
-  constructor() { }
+  faturamento: Faturamento;
+
+  constructor() { 
+    this.faturamento = new Faturamento();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

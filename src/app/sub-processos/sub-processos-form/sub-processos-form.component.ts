@@ -8,10 +8,16 @@ import { SubProcesso } from '../sub-processo'
   styleUrls: ['./sub-processos-form.component.css']
 })
 export class SubProcessosFormComponent implements OnInit {
+  subProcesso: SubProcesso;
 
-  constructor() { }
+  constructor() { 
+    this.subProcesso = new SubProcesso();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

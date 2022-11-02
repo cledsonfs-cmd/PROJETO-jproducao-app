@@ -9,9 +9,16 @@ import { Log } from '../log'
 })
 export class LogsFormComponent implements OnInit {
 
-  constructor() { }
+  log: Log;
+
+  constructor() {
+    this.log = new Log();
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

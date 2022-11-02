@@ -8,10 +8,16 @@ import { Operacao } from '../operacao'
   styleUrls: ['./operacoes-form.component.css']
 })
 export class OperacoesFormComponent implements OnInit {
+  operacao: Operacao;
 
-  constructor() { }
+  constructor() { 
+    this.operacao = new Operacao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

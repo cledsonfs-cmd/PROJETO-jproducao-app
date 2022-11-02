@@ -9,9 +9,16 @@ import { Setor } from '../setor'
 })
 export class SetoresFormComponent implements OnInit {
 
-  constructor() { }
+  setor: Setor;
+
+  constructor() {
+    this.setor = new Setor();
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

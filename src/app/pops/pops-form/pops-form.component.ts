@@ -9,9 +9,16 @@ import { Pop } from '../pop'
 })
 export class PopsFormComponent implements OnInit {
 
-  constructor() { }
+  pop: Pop;
+
+  constructor() {
+    this.pop = new Pop();
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

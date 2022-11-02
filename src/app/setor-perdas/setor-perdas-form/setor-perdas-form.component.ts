@@ -8,10 +8,16 @@ import { setorPerda } from '../setor-perda'
   styleUrls: ['./setor-perdas-form.component.css']
 })
 export class SetorPerdasFormComponent implements OnInit {
+  setorPerda: setorPerda;
 
-  constructor() { }
+  constructor() { 
+    this.setorPerda = new setorPerda();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

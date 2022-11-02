@@ -8,10 +8,16 @@ import { Producao } from '../producao'
   styleUrls: ['./producoes-form.component.css']
 })
 export class ProducoesFormComponent implements OnInit {
+  producao: Producao;
 
-  constructor() { }
+  constructor() { 
+    this.producao = new Producao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

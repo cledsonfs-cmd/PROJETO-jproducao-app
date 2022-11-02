@@ -9,9 +9,16 @@ import { ComponenteProcesso } from '../componente-processo'
 })
 export class ComponenteProcessosFormComponent implements OnInit {
 
-  constructor() { }
+  componenteProcesso: ComponenteProcesso;
+
+  constructor() { 
+    this.componenteProcesso = new ComponenteProcesso();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

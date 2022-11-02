@@ -8,10 +8,16 @@ import { Reprogramacao } from '../reprogramacao'
   styleUrls: ['./reprogramacoes-form.component.css']
 })
 export class ReprogramacoesFormComponent implements OnInit {
+  reprogramacao: Reprogramacao;
 
-  constructor() { }
+  constructor() { 
+    this.reprogramacao = new Reprogramacao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

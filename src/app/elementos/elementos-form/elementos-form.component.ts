@@ -9,9 +9,16 @@ import { Elemento } from '../elemento'
 })
 export class ElementosFormComponent implements OnInit {
 
-  constructor() { }
+  elemento: Elemento;
+
+  constructor() { 
+    this.elemento = new Elemento();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

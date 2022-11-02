@@ -8,10 +8,16 @@ import { TipoSetor } from '../tipo-setor'
   styleUrls: ['./tipo-setores-form.component.css']
 })
 export class TipoSetoresFormComponent implements OnInit {
+  tipoSetor:TipoSetor;
 
-  constructor() { }
+  constructor() { 
+    this.tipoSetor = new TipoSetor();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

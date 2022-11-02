@@ -18,4 +18,7 @@ export class AcessosFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+  }
+
 }

@@ -8,10 +8,16 @@ import { Tela } from '../tela'
   styleUrls: ['./telas-form.component.css']
 })
 export class TelasFormComponent implements OnInit {
+  tela: Tela;
 
-  constructor() { }
+  constructor() {
+    this.tela = new Tela();
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

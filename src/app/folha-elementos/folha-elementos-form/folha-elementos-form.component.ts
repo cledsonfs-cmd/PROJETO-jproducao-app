@@ -9,9 +9,16 @@ import { FolhaElemento } from '../folha-elemento'
 })
 export class FolhaElementosFormComponent implements OnInit {
 
-  constructor() { }
+  folhaElemento: FolhaElemento;
+
+  constructor() { 
+    this.folhaElemento = new FolhaElemento();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

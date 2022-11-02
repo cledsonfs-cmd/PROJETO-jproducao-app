@@ -9,9 +9,16 @@ import { CartaoOp } from '../cartao-op'
 })
 export class CartaoOpsFormComponent implements OnInit {
 
-  constructor() { }
+  cartaOp: CartaoOp;
+
+  constructor() { 
+    this.cartaOp = new CartaoOp();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

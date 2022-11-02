@@ -9,9 +9,16 @@ import { Embalagem } from '../embalagem'
 })
 export class EmbalagensFormComponent implements OnInit {
 
-  constructor() { }
+  embalagem: Embalagem;
+
+  constructor() { 
+    this.embalagem = new Embalagem();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

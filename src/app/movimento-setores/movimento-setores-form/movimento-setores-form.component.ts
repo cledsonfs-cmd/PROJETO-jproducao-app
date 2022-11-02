@@ -8,10 +8,16 @@ import { MovimentoSetor } from '../movimento-setor'
   styleUrls: ['./movimento-setores-form.component.css']
 })
 export class MovimentoSetoresFormComponent implements OnInit {
+  movimentoSetor: MovimentoSetor;
 
-  constructor() { }
+  constructor() { 
+    this.movimentoSetor = new MovimentoSetor();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

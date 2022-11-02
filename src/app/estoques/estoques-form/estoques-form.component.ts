@@ -9,9 +9,16 @@ import { Estoque } from '../estoque'
 })
 export class EstoquesFormComponent implements OnInit {
 
-  constructor() { }
+  estoque: Estoque;
+
+  constructor() { 
+    this.estoque = new Estoque();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

@@ -8,10 +8,16 @@ import { Representante } from '../representante'
   styleUrls: ['./representantes-form.component.css']
 })
 export class RepresentantesFormComponent implements OnInit {
+  representante: Representante;
 
-  constructor() { }
+  constructor() { 
+    this.representante = new Representante;
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

@@ -9,9 +9,16 @@ import { MotivoPerda } from '../motivo-perda'
 })
 export class MotivoPerdasFormComponent implements OnInit {
 
-  constructor() { }
+  motivoPerda: MotivoPerda;
+
+  constructor() { 
+    this.motivoPerda = new MotivoPerda();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

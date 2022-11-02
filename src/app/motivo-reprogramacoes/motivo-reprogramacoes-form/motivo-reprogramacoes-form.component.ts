@@ -9,9 +9,16 @@ import { MotivoReprogramacao } from '../motivo-reprogramacao'
 })
 export class MotivoReprogramacoesFormComponent implements OnInit {
 
-  constructor() { }
+  motivoReprogramacao: MotivoReprogramacao;
+
+  constructor() { 
+    this.motivoReprogramacao = new MotivoReprogramacao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

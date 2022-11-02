@@ -8,10 +8,16 @@ import { PrazoEntrega } from '../prazo-entrega'
   styleUrls: ['./prazo-entregas-form.component.css']
 })
 export class PrazoEntregasFormComponent implements OnInit {
+  prazoEntrega: PrazoEntrega;
 
-  constructor() { }
+  constructor() { 
+    this.prazoEntrega = new PrazoEntrega();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

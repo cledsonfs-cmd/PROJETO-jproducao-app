@@ -9,9 +9,16 @@ import { FolhaObservacao } from '../folha-observacao'
 })
 export class FolhaObservacoesFormComponent implements OnInit {
 
-  constructor() { }
+  folhaObservacao: FolhaObservacao;
+
+  constructor() { 
+    this.folhaObservacao = new FolhaObservacao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

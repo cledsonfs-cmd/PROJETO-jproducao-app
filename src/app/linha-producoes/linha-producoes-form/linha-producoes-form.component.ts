@@ -9,9 +9,16 @@ import { LinhaProducao } from '../linha-producao'
 })
 export class LinhaProducoesFormComponent implements OnInit {
 
-  constructor() { }
+  linhaProducao: LinhaProducao;
+
+  constructor() { 
+    this.linhaProducao = new LinhaProducao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

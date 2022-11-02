@@ -9,9 +9,16 @@ import { Lote } from '../lote'
 })
 export class LotesFormComponent implements OnInit {
 
-  constructor() { }
+  lote: Lote;
+
+  constructor() { 
+    this.lote = new Lote();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

@@ -9,9 +9,16 @@ import { FuncionarioEquipamento } from '../funcionario-equipamento'
 })
 export class FuncionarioEquipamentosFormComponent implements OnInit {
 
-  constructor() { }
+  funcionarioEquipamento: FuncionarioEquipamento;
+
+  constructor() { 
+    this.funcionarioEquipamento = new FuncionarioEquipamento();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

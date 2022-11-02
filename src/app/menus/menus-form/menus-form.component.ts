@@ -9,7 +9,11 @@ import { Menu } from '../menu'
 })
 export class MenusFormComponent implements OnInit {
 
-  constructor() { }
+  menu: Menu;
+
+  constructor() {
+    this.menu = new Menu();
+   }
 
   ngOnInit(): void {
   }

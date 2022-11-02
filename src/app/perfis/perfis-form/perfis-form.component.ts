@@ -9,9 +9,16 @@ import { Perfil } from '../perfil'
 })
 export class PerfisFormComponent implements OnInit {
 
-  constructor() { }
+  perfil: Perfil;
+
+  constructor() { 
+    this.perfil = new Perfil();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

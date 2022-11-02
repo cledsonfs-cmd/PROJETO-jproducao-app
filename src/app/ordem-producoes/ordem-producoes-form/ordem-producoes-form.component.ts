@@ -9,9 +9,16 @@ import { OrdemProducao } from '../ordem-producao'
 })
 export class OrdemProducoesFormComponent implements OnInit {
 
-  constructor() { }
+  ordemProducao: OrdemProducao;
+
+  constructor() { 
+    this.ordemProducao = new OrdemProducao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

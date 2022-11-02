@@ -9,9 +9,16 @@ import { ComponenteMateriaPrima } from '../componente-materia-prima'
 })
 export class ComponenteMateriaPrimasFormComponent implements OnInit {
 
-  constructor() { }
+  componenteMateriaPrima: ComponenteMateriaPrima;
+
+  constructor() { 
+    this.componenteMateriaPrima = new ComponenteMateriaPrima();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

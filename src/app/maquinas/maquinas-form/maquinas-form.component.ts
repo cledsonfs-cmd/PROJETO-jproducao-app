@@ -9,9 +9,16 @@ import { Maquina } from '../maquina'
 })
 export class MaquinasFormComponent implements OnInit {
 
-  constructor() { }
+  maquina: Maquina;
+
+  constructor() { 
+    this.maquina = new Maquina();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

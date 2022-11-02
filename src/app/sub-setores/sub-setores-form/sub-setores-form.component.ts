@@ -8,10 +8,16 @@ import { SubSetor } from '../sub-setor'
   styleUrls: ['./sub-setores-form.component.css']
 })
 export class SubSetoresFormComponent implements OnInit {
+  subSetor: SubSetor;
 
-  constructor() { }
+  constructor() { 
+    this.subSetor = new SubSetor();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

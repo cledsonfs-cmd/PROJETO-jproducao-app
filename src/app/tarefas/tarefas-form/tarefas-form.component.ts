@@ -8,10 +8,16 @@ import { Tarefa } from '../tarefa'
   styleUrls: ['./tarefas-form.component.css']
 })
 export class TarefasFormComponent implements OnInit {
+  tarefa: Tarefa;
 
-  constructor() { }
+  constructor() { 
+    this.tarefa = new Tarefa();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

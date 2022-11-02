@@ -8,10 +8,16 @@ import { Usuario } from '../usuario'
   styleUrls: ['./usuarios-form.component.css']
 })
 export class UsuariosFormComponent implements OnInit {
+  usuario: Usuario;
 
-  constructor() { }
+  constructor() { 
+    this.usuario = new Usuario();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

@@ -8,10 +8,16 @@ import { Unidade } from '../unidade'
   styleUrls: ['./unidades-form.component.css']
 })
 export class UnidadesFormComponent implements OnInit {
+  unidade: Unidade;
 
-  constructor() { }
+  constructor() { 
+    this.unidade = new Unidade();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

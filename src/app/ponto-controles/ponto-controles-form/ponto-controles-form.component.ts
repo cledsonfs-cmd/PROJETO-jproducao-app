@@ -9,9 +9,16 @@ import { PontoControle } from '../ponto-controle'
 })
 export class PontoControlesFormComponent implements OnInit {
 
-  constructor() { }
+  pontoControle: PontoControle;
+
+  constructor() { 
+    this.pontoControle = new PontoControle();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }

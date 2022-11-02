@@ -9,9 +9,16 @@ import { Devolucao } from '../devolucao'
 })
 export class DevolucoesFormComponent implements OnInit {
 
-  constructor() { }
+  devolucao: Devolucao;
+
+  constructor() { 
+    this.devolucao = new Devolucao();
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
   }
 
 }
