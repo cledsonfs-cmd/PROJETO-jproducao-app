@@ -1,9 +1,61 @@
 export class OrdemProducao {
     id: number;
     dataCadastro: string;
+    id_funcionario: number;
+    id_empresa: number;
+    id_lote: number;
+    codigo: string;
+    id_produto: number;
+    id_unidade: number;
+    id_processo: number;
+    id_setor: number;
+    prevista: number;
+    disponivel: number;
+    programada: number;
+    entregaImediata: boolean;
+    observacoes: string;
+    impressa: boolean;
+    status: string;
+    nivelArvore: number;
+    controlada: boolean;
+    dataConclusao: string;
+    movimentoInverso: boolean;
+    reprogramada: number;
+    solicitacaoReprogramacao: boolean;
+    disponibilizadoPor: number;
+    conclusaoUsuario: boolean;
+    completa: boolean;
+    avulsa: boolean;
+    update: string;
 
     constructor() {  
         this.id = 0;
         this.dataCadastro = '';
+        this.id_funcionario = 0;
+        this.id_empresa = 0;
+        this.id_lote = 0;
+        this.codigo = '';
+        this.id_produto = 0;
+        this.id_unidade = 0;
+        this.id_processo = 0;
+        this.id_setor = 0;
+        this.prevista = 0;
+        this.disponivel = 0;
+        this.programada = 0;
+        this.entregaImediata = false;
+        this.observacoes = '';
+        this.impressa = false;
+        this.status = '';
+        this.nivelArvore = 0;
+        this.controlada = false;
+        this.dataConclusao = '';
+        this.movimentoInverso = false;
+        this.reprogramada = 0;
+        this.solicitacaoReprogramacao = false;
+        this.disponibilizadoPor = 0;
+        this.conclusaoUsuario = false;
+        this.completa = false;
+        this.avulsa = false;
+        this.update = '';
     }
 }
