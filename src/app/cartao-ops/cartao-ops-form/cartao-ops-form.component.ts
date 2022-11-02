@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CartaoOp } from '../cartao-op'
+
 @Component({
   selector: 'app-cartao-ops-form',
   templateUrl: './cartao-ops-form.component.html',

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Log } from '../log'
+
 @Component({
   selector: 'app-logs-form',
   templateUrl: './logs-form.component.html',

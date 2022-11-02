@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Reprogramacao } from '../reprogramacao'
+
 @Component({
   selector: 'app-reprogramacoes-form',
   templateUrl: './reprogramacoes-form.component.html',

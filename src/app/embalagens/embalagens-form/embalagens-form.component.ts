@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Embalagem } from '../embalagem'
+
 @Component({
   selector: 'app-embalagens-form',
   templateUrl: './embalagens-form.component.html',

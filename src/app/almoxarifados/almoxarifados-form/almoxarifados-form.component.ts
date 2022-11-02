@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Almoxarifado } from '../almoxarifado'
+
 @Component({
   selector: 'app-almoxarifados-form',
   templateUrl: './almoxarifados-form.component.html',

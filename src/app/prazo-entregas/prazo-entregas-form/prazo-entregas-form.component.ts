@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PrazoEntrega } from '../prazo-entrega'
+
 @Component({
   selector: 'app-prazo-entregas-form',
   templateUrl: './prazo-entregas-form.component.html',

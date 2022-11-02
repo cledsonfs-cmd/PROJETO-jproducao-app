@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SubProcesso } from '../sub-processo'
+
 @Component({
   selector: 'app-sub-processos-form',
   templateUrl: './sub-processos-form.component.html',

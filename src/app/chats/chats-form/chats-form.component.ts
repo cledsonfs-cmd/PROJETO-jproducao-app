@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Chat } from '../chat'
+
 @Component({
   selector: 'app-chats-form',
   templateUrl: './chats-form.component.html',

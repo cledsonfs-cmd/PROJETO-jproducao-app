@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Perfil } from '../perfil'
+
 @Component({
   selector: 'app-perfis-form',
   templateUrl: './perfis-form.component.html',

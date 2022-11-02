@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Usuario } from '../usuario'
+
 @Component({
   selector: 'app-usuarios-form',
   templateUrl: './usuarios-form.component.html',

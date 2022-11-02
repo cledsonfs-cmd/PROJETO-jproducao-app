@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Faturamento } from '../faturamento'
+
 @Component({
   selector: 'app-faturamentos-form',
   templateUrl: './faturamentos-form.component.html',

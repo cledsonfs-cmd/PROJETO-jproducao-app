@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FolhaElemento } from '../folha-elemento'
+
 @Component({
   selector: 'app-folha-elementos-form',
   templateUrl: './folha-elementos-form.component.html',

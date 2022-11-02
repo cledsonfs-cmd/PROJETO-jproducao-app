@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Carteira } from '../carteira'
+
 @Component({
   selector: 'app-carteiras-form',
   templateUrl: './carteiras-form.component.html',

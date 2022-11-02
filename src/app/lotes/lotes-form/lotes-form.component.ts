@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Lote } from '../lote'
+
 @Component({
   selector: 'app-lotes-form',
   templateUrl: './lotes-form.component.html',

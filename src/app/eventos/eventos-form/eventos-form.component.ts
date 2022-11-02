@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Evento } from '../evento'
+
 @Component({
   selector: 'app-eventos-form',
   templateUrl: './eventos-form.component.html',

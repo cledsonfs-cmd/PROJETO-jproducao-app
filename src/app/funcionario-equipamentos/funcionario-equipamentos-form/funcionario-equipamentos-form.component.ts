@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FuncionarioEquipamento } from '../funcionario-equipamento'
+
 @Component({
   selector: 'app-funcionario-equipamentos-form',
   templateUrl: './funcionario-equipamentos-form.component.html',

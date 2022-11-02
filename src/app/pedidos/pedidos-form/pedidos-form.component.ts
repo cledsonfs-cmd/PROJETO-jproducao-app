@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Pedido } from '../pedido'
+
 @Component({
   selector: 'app-pedidos-form',
   templateUrl: './pedidos-form.component.html',

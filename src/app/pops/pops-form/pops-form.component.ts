@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Pop } from '../pop'
+
 @Component({
   selector: 'app-pops-form',
   templateUrl: './pops-form.component.html',

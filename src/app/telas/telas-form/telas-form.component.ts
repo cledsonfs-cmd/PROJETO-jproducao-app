@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Tela } from '../tela'
+
 @Component({
   selector: 'app-telas-form',
   templateUrl: './telas-form.component.html',
