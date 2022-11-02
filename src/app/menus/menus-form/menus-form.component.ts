@@ -18,4 +18,7 @@ export class MenusFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+  }
+
 }

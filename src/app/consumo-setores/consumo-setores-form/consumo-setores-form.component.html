@@ -2,4 +2,22 @@
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item active">Cadastro</li>
 </ol>
+<div class="container">    
+    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="deom-group">
+                    <label>ID:</label>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="consumoSetor.id" name=""id>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="deom-group">
+                    <label>Data Cadastro:</label>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="consumoSetor.dataCadastro" name="dataCadastro">
+                </div>
+            </div>
+        </div>        
+    </form>
+</div>
 
