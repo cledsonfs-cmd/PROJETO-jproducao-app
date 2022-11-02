@@ -62,6 +62,61 @@ import { TipoSetoresModule } from './tipo-setores/tipo-setores.module';
 import { UnidadesModule } from './unidades/unidades.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 
+import { AcessosService } from './acessos.service';
+import { AlmoxarifadosService } from './almoxarifados.service';
+import { CartaoOpsService } from './cartao-ops.service';
+import { CarteirasService } from './carteiras.service';
+import { ChatsService } from './chats.service';
+import { ClientesService } from './clientes.service';
+import { ComponenteMateriaPrimasService } from './componente-materia-primas.service';
+import { ComponenteProcessosService } from './componente-processos.service';
+import { ComponentesService } from './componentes.service';
+import { ConsumoSetoresService } from './consumo-setores.service';
+import { DevolucoesService } from './devolucoes.service';
+import { ElementosService } from './elementos.service';
+import { ElementoTemposService } from './elemento-tempos.service';
+import { EmbalagensService } from './embalagens.service';
+import { EmpresasService } from './empresas.service';
+import { EquipamentosService } from './equipamentos.service';
+import { EstoquesService } from './estoques.service';
+import { EventosService } from './eventos.service';
+import { FaturamentosService } from './faturamentos.service';
+import { FolhaElementosService } from './folha-elementos.service';
+import { FolhaObservacoesService } from './folha-observacoes.service';
+import { FuncionarioEquipamentosService } from './funcionario-equipamentos.service';
+import { FuncionariosService } from './funcionarios.service';
+import { ItemPedidosService } from './item-pedidos.service';
+import { LinhaProducoesService } from './linha-producoes.service';
+import { LogsService } from './logs.service';
+import { LotesService } from './lotes.service';
+import { MaquinasService } from './maquinas.service';
+import { MateriaPrimasService } from './materia-primas.service';
+import { MenusService } from './menus.service';
+import { MotivoPerdasService } from './motivo-perdas.service';
+import { MotivoReprogramacoesService } from './motivo-reprogramacoes.service';
+import { MovimentoSetoresService } from './movimento-setores.service';
+import { OperacoesService } from './operacoes.service';
+import { OrdemProducoesService } from './ordem-producoes.service';
+import { PedidosService } from './pedidos.service';
+import { PerfisService } from './perfis.service';
+import { PontoControlesService } from './ponto-controles.service';
+import { PopsService } from './pops.service';
+import { PrazoEntregasService } from './prazo-entregas.service';
+import { ProcedimentosService } from './procedimentos.service';
+import { ProcessosService } from './processos.service';
+import { ProducoesService } from './producoes.service';
+import { ProdutosService } from './produtos.service';
+import { RepresentantesService } from './representantes.service';
+import { ReprogramacoesService } from './reprogramacoes.service';
+import { SetoresService } from './setores.service';
+import { SetorPerdasService } from './setor-perdas.service';
+import { SubProcessosService } from './sub-processos.service';
+import { SubSetoresService } from './sub-setores.service';
+import { TarefasService } from './tarefas.service';
+import { TelasService } from './telas.service';
+import { TipoSetoresService } from './tipo-setores.service';
+import { UnidadesService } from './unidades.service';
+import { UsuariosService } from './usuarios.service';
 
 
 
@@ -131,7 +186,63 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     UnidadesModule,
     UsuariosModule
   ],
-  providers: [],
+  providers: [
+    AcessosService,
+    AlmoxarifadosService,
+    CartaoOpsService,
+    CarteirasService,
+    ChatsService,
+    ClientesService,
+    ComponenteMateriaPrimasService,
+    ComponenteProcessosService,
+    ComponentesService,
+    ConsumoSetoresService,
+    DevolucoesService,
+    ElementosService,
+    ElementoTemposService,
+    EmbalagensService,
+    EmpresasService,
+    EquipamentosService,
+    EstoquesService,
+    EventosService,
+    FaturamentosService,
+    FolhaElementosService,
+    FolhaObservacoesService,
+    FuncionarioEquipamentosService,
+    FuncionariosService,
+    ItemPedidosService,
+    LinhaProducoesService,
+    LogsService,
+    LotesService,
+    MaquinasService,
+    MateriaPrimasService,
+    MenusService,
+    MotivoPerdasService,
+    MotivoReprogramacoesService,
+    MovimentoSetoresService,
+    OperacoesService,
+    OrdemProducoesService,
+    PedidosService,
+    PerfisService,
+    PontoControlesService,
+    PopsService,
+    PrazoEntregasService,
+    ProcedimentosService,
+    ProcessosService,
+    ProducoesService,
+    ProdutosService,
+    RepresentantesService,
+    ReprogramacoesService,
+    SetoresService,
+    SetorPerdasService,
+    SubProcessosService,
+    SubSetoresService,
+    TarefasService,
+    TelasService,
+    TipoSetoresService,
+    UnidadesService,
+    UsuariosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
