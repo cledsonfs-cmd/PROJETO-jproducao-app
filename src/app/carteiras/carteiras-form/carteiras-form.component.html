@@ -3,12 +3,12 @@
     <li class="breadcrumb-item active">Cadastro</li>
 </ol>
 <div class="container">    
-    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #carteiraForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-md-6">
                 <div class="deom-group">
                     <label>ID:</label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="carteira.id" name=""id>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="carteira.id" name="id">
                 </div>
             </div>
             <div class="col-md-6">
@@ -17,7 +17,33 @@
                     <input type="text" class="form-control" disabled="true" [ngModel]="carteira.dataCadastro" name="dataCadastro">
                 </div>
             </div>
-        </div>        
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="deom-group">
+                    <label>Empresa: *</label>
+                    <input type="text" class="form-control" [(ngModel)]="carteira.id_empresa" name="id_empresa" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="deom-group">
+                    <label>Valor: *</label>
+                    <input type="text" class="form-control" [(ngModel)]="carteira.valor" name="valor">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <br/>
+            </div>                
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-success" >
+                    <i class="fa fa-save"></i> Salvar
+                </button>
+            </div>                
+        </div>
     </form>
 </div>
 
