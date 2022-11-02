@@ -1,4 +1,4 @@
-export class setorPerda {
+export class SetorPerda {
     id: number;
     dataCadastro: string;
     quantidade: number;
