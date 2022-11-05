@@ -7,11 +7,11 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Dashboard
                 </a>
                 
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGlobal" aria-expanded="false" aria-controls="collapseGlobal">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>GLOBAL
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseGlobal" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" routerLink="/carteiras-form">Carteiras</a>
                         <a class="nav-link" routerLink="/devolucoes-form">Devoluções</a>
@@ -21,38 +21,88 @@
                         <a class="nav-link" href="/reprogramacoes-form">Reprogramações & Retrabalhos</a>
                     </nav>
                 </div>
+
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFerramentas" aria-expanded="false" aria-controls="collapseFerramentas">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>FERRAMENTAS
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseFerramentas" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" routerLink="#">Folha de Observações</a>                        
+                        <a class="nav-link" routerLink="#">Fluxograma</a>                        
+                        <a class="nav-link" routerLink="#">LSC & LSI</a>                        
+                        <a class="nav-link" routerLink="#">Matriz BCG</a>                        
+                        <a class="nav-link" routerLink="#">Pops</a>                        
+                    </nav>
+                </div>
+                
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRelatorios" aria-expanded="false" aria-controls="collapseRelatorios">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>RELATÓRIOS
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseRelatorios" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" routerLink="#">-</a>                        
+                                               
+                    </nav>
+                </div>
+
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSetores" aria-expanded="false" aria-controls="collapseSetores">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>SETORES
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseSetores" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" routerLink="#">-</a>                        
+                                               
+                    </nav>
+                </div>
+                
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
                     ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Pages
+                    CONFIGURAÇÕES
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                 ></a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth"
-                            >Authentication
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseCadastro" aria-expanded="false" aria-controls="pagesCollapseCadastro"
+                            >Cadastros
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                         ></a>
-                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="login.html">Login</a><a class="nav-link" href="register.html">Register</a><a class="nav-link" href="password.html">Forgot Password</a></nav>
+                        <div class="collapse" id="pagesCollapseCadastro" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" routerLink="/empresas-form">Empresa</a>
+                                <a class="nav-link" href="#">Linha de Produção</a>
+                                <a class="nav-link" href="#">Máquina</a>
+                                <a class="nav-link" href="#">Matéria Prima</a>
+                                <a class="nav-link" href="#">Motivo Reprogramação</a>
+                                <a class="nav-link" href="#">Operador</a>
+                                <a class="nav-link" href="#">Ponto de Controle</a>
+                                <a class="nav-link" href="#">Processo</a>
+                                <a class="nav-link" href="#">Produto</a>
+                                <a class="nav-link" href="#">Setor</a>
+                                <a class="nav-link" href="#">Usuário</a>
+                            </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError"
-                            >Error
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseTabelas" aria-expanded="false" aria-controls="pagesCollapseTabelas"
+                            >Tabelas
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                         ></a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="401.html">401 Page</a><a class="nav-link" href="404.html">404 Page</a><a class="nav-link" href="500.html">500 Page</a></nav>
-                        </div>
+                        <div class="collapse" id="pagesCollapseTabelas" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Fatores para os Limites de Controle</a>
+                            </nav>
+                        </div>                    
                     </nav>
+                    
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="charts.html"
-                    ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts</a
-                ><a class="nav-link" href="tables.html"
-                    ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables</a
-                >
-            </div>
+                    <a class="nav-link" href="#">
+                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i>
+                        </div>
+                        Carga Dados
+                    </a>
+                </div>
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
