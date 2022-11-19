@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LinhaProducao } from '../linha-producoes/linha-producao';
 
@@ -6,5 +7,7 @@ import { LinhaProducao } from '../linha-producoes/linha-producao';
 })
 export class LinhaProducoesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ConsumoSetor } from '../consumo-setores/consumo-setor';
 
@@ -6,5 +7,7 @@ import { ConsumoSetor } from '../consumo-setores/consumo-setor';
 })
 export class ConsumoSetoresService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

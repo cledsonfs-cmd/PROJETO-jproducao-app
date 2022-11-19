@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pop } from '../pops/pop';
 
@@ -6,5 +7,7 @@ import { Pop } from '../pops/pop';
 })
 export class PopsService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

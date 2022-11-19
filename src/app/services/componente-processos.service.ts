@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ComponenteProcesso } from '../componente-processos/componente-processo';
 
@@ -6,5 +7,7 @@ import { ComponenteProcesso } from '../componente-processos/componente-processo'
 })
 export class ComponenteProcessosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

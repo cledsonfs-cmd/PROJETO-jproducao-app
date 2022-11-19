@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Tela } from '../telas/tela';
 
@@ -6,5 +7,7 @@ import { Tela } from '../telas/tela';
 })
 export class TelasService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

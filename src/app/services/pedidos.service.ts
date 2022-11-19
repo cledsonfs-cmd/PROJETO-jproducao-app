@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pedido } from '../pedidos/pedido';
 
@@ -6,5 +7,7 @@ import { Pedido } from '../pedidos/pedido';
 })
 export class PedidosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

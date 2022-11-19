@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Embalagem } from '../embalagens/embalagem';
 
@@ -6,5 +7,7 @@ import { Embalagem } from '../embalagens/embalagem';
 })
 export class EmbalagensService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Elemento } from '../elementos/elemento';
 
@@ -6,5 +7,5 @@ import { Elemento } from '../elementos/elemento';
 })
 export class ElementosService {
 
-  constructor() { }
-}
+  constructor(
+    private http : HttpClient

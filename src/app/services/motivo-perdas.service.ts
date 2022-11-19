@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MotivoPerda } from '../motivo-perdas/motivo-perda';
 
@@ -6,5 +7,7 @@ import { MotivoPerda } from '../motivo-perdas/motivo-perda';
 })
 export class MotivoPerdasService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

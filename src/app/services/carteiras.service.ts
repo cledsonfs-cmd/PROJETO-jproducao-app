@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Carteira } from '../carteiras/carteira';
 
@@ -6,5 +7,7 @@ import { Carteira } from '../carteiras/carteira';
 })
 export class CarteirasService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

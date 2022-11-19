@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MotivoReprogramacao } from '../motivo-reprogramacoes/motivo-reprogramacao';
 
@@ -6,5 +7,7 @@ import { MotivoReprogramacao } from '../motivo-reprogramacoes/motivo-reprogramac
 })
 export class MotivoReprogramacoesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

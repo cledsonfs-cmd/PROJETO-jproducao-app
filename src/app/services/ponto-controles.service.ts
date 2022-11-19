@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PontoControle } from '../ponto-controles/ponto-controle';
 
@@ -6,5 +7,7 @@ import { PontoControle } from '../ponto-controles/ponto-controle';
 })
 export class PontoControlesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

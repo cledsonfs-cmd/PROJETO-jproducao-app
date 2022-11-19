@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Representante } from '../representantes/representante';
 
@@ -6,5 +7,7 @@ import { Representante } from '../representantes/representante';
 })
 export class RepresentantesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

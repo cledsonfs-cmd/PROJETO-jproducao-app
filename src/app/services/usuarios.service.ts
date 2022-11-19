@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../usuarios/usuario';
 
@@ -6,5 +7,7 @@ import { Usuario } from '../usuarios/usuario';
 })
 export class UsuariosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

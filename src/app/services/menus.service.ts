@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Menu } from '../menus/menu';
 
@@ -6,5 +7,7 @@ import { Menu } from '../menus/menu';
 })
 export class MenusService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

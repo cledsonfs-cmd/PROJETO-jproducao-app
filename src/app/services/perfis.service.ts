@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Perfil } from '../perfis/perfil';
 
@@ -6,5 +7,7 @@ import { Perfil } from '../perfis/perfil';
 })
 export class PerfisService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

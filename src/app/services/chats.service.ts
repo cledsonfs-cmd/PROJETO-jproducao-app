@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Chat } from '../chats/chat';
 
@@ -6,5 +7,7 @@ import { Chat } from '../chats/chat';
 })
 export class ChatsService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

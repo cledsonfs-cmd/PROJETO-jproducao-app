@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Unidade } from '../unidades/unidade';
 
@@ -6,5 +7,7 @@ import { Unidade } from '../unidades/unidade';
 })
 export class UnidadesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

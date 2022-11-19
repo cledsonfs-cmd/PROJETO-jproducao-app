@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SetorPerda } from '../setor-perdas/setor-perda';
 
@@ -6,5 +7,7 @@ import { SetorPerda } from '../setor-perdas/setor-perda';
 })
 export class SetorPerdasService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

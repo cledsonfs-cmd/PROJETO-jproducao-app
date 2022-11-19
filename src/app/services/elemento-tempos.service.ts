@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ElementoTempo } from '../elemento-tempos/elemento-tempo';
 
@@ -6,5 +7,7 @@ import { ElementoTempo } from '../elemento-tempos/elemento-tempo';
 })
 export class ElementoTemposService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

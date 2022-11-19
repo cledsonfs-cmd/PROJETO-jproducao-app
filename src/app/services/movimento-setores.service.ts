@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MovimentoSetor } from '../movimento-setores/movimento-setor';
 
@@ -6,5 +7,7 @@ import { MovimentoSetor } from '../movimento-setores/movimento-setor';
 })
 export class MovimentoSetoresService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

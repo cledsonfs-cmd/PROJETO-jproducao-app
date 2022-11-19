@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Operacao } from '../operacoes/operacao';
 
@@ -6,5 +7,7 @@ import { Operacao } from '../operacoes/operacao';
 })
 export class OperacoesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Faturamento } from '../faturamentos/faturamento';
 
@@ -6,5 +7,7 @@ import { Faturamento } from '../faturamentos/faturamento';
 })
 export class FaturamentosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FuncionarioEquipamento } from '../funcionario-equipamentos/funcionario-equipamento';
 
@@ -6,5 +7,7 @@ import { FuncionarioEquipamento } from '../funcionario-equipamentos/funcionario-
 })
 export class FuncionarioEquipamentosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

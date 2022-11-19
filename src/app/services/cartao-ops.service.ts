@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CartaoOp } from '../cartao-ops/cartao-op';
 
@@ -6,5 +7,7 @@ import { CartaoOp } from '../cartao-ops/cartao-op';
 })
 export class CartaoOpsService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

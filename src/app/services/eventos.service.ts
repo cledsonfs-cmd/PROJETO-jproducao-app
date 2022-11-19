@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Evento } from '../eventos/evento';
 
@@ -6,5 +7,7 @@ import { Evento } from '../eventos/evento';
 })
 export class EventosService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

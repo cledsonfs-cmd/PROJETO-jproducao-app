@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Setor } from '../setores/setor';
 
@@ -6,5 +7,7 @@ import { Setor } from '../setores/setor';
 })
 export class SetoresService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

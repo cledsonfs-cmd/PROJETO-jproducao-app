@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Log } from '../logs/log';
 
@@ -6,5 +7,7 @@ import { Log } from '../logs/log';
 })
 export class LogsService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

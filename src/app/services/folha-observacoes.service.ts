@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FolhaObservacao } from '../folha-observacoes/folha-observacao';
 
@@ -6,5 +7,7 @@ import { FolhaObservacao } from '../folha-observacoes/folha-observacao';
 })
 export class FolhaObservacoesService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }

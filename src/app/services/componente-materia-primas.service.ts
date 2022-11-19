@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ComponenteMateriaPrima } from '../componente-materia-primas/componente-materia-prima';
 
@@ -6,5 +7,7 @@ import { ComponenteMateriaPrima } from '../componente-materia-primas/componente-
 })
 export class ComponenteMateriaPrimasService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }
