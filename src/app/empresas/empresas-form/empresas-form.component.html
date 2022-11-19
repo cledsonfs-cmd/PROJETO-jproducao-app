@@ -3,20 +3,144 @@
     <li class="breadcrumb-item active">Cadastro</li>
 </ol>
 <div class="container">    
-    <form #empresaForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #empresaForm="ngForm" (ngSubmit)="onSubmit()">        
         <div class="row">
-            <div class="col-md-6">
-                <div class="deom-group">
-                    <label>ID:</label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="empresa.id" name=""id>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">ID</span>
+                    </div>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="empresa.id" name="id">
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="deom-group">
-                    <label>Data Cadastro:</label>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Cadastro</span>
+                    </div>
                     <input type="text" class="form-control" disabled="true" [ngModel]="empresa.dataCadastro" name="dataCadastro">
                 </div>
             </div>
-        </div>        
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Código</span>
+                    </div>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="empresa.codigoEmpresa" name="codigoEmpresa">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Razão Social</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.razaoSocial" name="razaoSocial">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Nome Reduzido</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.nomeReduzido" name="nomeReduzido">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">CNPJ</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.cnpj" name="cnpj">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Inscrição Estadual</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.inscricaoEstadual" name="inscricaoEstadual">
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">CEP</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.cep" name="cep">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Rua</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.rua" name="rua">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Bairro</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.bairro" name="bairro">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Municipio</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.municipio" name="municipio">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">UF</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.uf" name="uf">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Pasta</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.pasta" name="pasta">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Pasta Historico</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.pastaHistorico" name="pastaHistorico">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Codigo Barras</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="empresa.codigoBarras" name="codigoBarras">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary ml-1">Limpar</button>
+            </div>
+        </div>
     </form>
 </div>
