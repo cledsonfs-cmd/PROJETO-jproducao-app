@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LinhaProducao } from './linha-producoes/linha-producao';
+import { LinhaProducao } from '../linha-producoes/linha-producao';
 
 @Injectable({
   providedIn: 'root'

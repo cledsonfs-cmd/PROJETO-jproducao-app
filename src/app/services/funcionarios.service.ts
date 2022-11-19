@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Funcionario } from './funcionarios/funcionario';
+import { Funcionario } from '../funcionarios/funcionario';
 
 @Injectable({
   providedIn: 'root'

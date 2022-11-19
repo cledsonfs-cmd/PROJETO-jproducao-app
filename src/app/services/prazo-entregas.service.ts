@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PrazoEntrega } from './prazo-entregas/prazo-entrega';
+import { PrazoEntrega } from '../prazo-entregas/prazo-entrega';
 
 @Injectable({
   providedIn: 'root'

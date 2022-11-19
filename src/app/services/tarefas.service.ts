@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Tarefa } from './tarefas/tarefa';
+import { Tarefa } from '../tarefas/tarefa';
 
 @Injectable({
   providedIn: 'root'

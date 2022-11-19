@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PontoControle } from './ponto-controles/ponto-controle';
+import { PontoControle } from '../ponto-controles/ponto-controle';
 
 @Injectable({
   providedIn: 'root'

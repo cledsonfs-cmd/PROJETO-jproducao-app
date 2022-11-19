@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { OrdemProducao } from './ordem-producoes/ordem-producao';
+import { OrdemProducao } from '../ordem-producoes/ordem-producao';
 
 @Injectable({
   providedIn: 'root'

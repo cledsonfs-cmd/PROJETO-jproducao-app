@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Operacao } from './operacoes/operacao';
+import { Operacao } from '../operacoes/operacao';
 
 @Injectable({
   providedIn: 'root'

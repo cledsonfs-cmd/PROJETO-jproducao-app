@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MotivoPerda } from './motivo-perdas/motivo-perda';
+import { MotivoPerda } from '../motivo-perdas/motivo-perda';
 
 @Injectable({
   providedIn: 'root'

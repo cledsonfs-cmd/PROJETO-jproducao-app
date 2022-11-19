@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Setor } from './setores/setor';
+import { Setor } from '../setores/setor';
 
 @Injectable({
   providedIn: 'root'

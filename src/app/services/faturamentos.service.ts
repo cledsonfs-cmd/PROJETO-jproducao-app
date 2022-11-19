@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Faturamento } from './faturamentos/faturamento';
+import { Faturamento } from '../faturamentos/faturamento';
 
 @Injectable({
   providedIn: 'root'

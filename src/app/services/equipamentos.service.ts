@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Equipamento } from './equipamentos/equipamento';
+import { Equipamento } from '../equipamentos/equipamento';
 
 @Injectable({
   providedIn: 'root'

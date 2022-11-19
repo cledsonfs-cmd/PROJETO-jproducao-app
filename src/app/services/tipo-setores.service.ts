@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TipoSetor } from './tipo-setores/tipo-setor';
+import { TipoSetor } from '../tipo-setores/tipo-setor';
 
 @Injectable({
   providedIn: 'root'

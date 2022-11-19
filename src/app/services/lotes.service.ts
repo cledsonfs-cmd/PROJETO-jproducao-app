@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Lote } from './lotes/lote';
+import { Lote } from '../lotes/lote';
 
 @Injectable({
   providedIn: 'root'

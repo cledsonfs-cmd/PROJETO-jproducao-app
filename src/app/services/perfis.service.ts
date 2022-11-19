@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Perfil } from './perfis/perfil';
+import { Perfil } from '../perfis/perfil';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Unidade } from './unidades/unidade';
+import { Unidade } from '../unidades/unidade';
 
 @Injectable({
   providedIn: 'root'
