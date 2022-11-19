@@ -9,12 +9,12 @@ import { SubProcessosService } from '../../services/sub-processos.service';
   styleUrls: ['./sub-processos-form.component.css']
 })
 export class SubProcessosFormComponent implements OnInit {
-  subProcesso: SubProcesso;
+  objeto: SubProcesso = new SubProcesso();
 
   constructor(
     private subProcessosServices: SubProcessosService
   ) { 
-    this.subProcesso = new SubProcesso();
+    
   }
 
   ngOnInit(): void {

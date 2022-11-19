@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -61,6 +62,8 @@ import { TelasModule } from './telas/telas.module';
 import { TipoSetoresModule } from './tipo-setores/tipo-setores.module';
 import { UnidadesModule } from './unidades/unidades.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
+
+import { ToolsService } from './services/tools.service';
 
 import { AcessosService } from './services/acessos.service';
 import { AlmoxarifadosService } from './services/almoxarifados.service';
@@ -128,6 +131,7 @@ import { UsuariosService } from './services/usuarios.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     TemplateModule,
     AcessosModule,
     AlmoxarifadosModule,
@@ -187,6 +191,7 @@ import { UsuariosService } from './services/usuarios.service';
     UsuariosModule
   ],
   providers: [
+    ToolsService,
     AcessosService,
     AlmoxarifadosService,
     CartaoOpsService,

@@ -9,12 +9,12 @@ import { MovimentoSetoresService } from '../../services/movimento-setores.servic
   styleUrls: ['./movimento-setores-form.component.css']
 })
 export class MovimentoSetoresFormComponent implements OnInit {
-  movimentoSetor: MovimentoSetor;
+  objeto: MovimentoSetor = new MovimentoSetor();
 
   constructor(
     private movimentoSetoresServices: MovimentoSetoresService
   ) { 
-    this.movimentoSetor = new MovimentoSetor();
+    
   }
 
   ngOnInit(): void {

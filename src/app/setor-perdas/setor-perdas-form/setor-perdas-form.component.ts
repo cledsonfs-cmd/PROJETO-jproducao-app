@@ -9,12 +9,12 @@ import { SetorPerdasService } from '../../services/setor-perdas.service';
   styleUrls: ['./setor-perdas-form.component.css']
 })
 export class SetorPerdasFormComponent implements OnInit {
-  setorPerda: SetorPerda;
+  objeto: SetorPerda = new SetorPerda();
 
   constructor(
     private setorPerdasService: SetorPerdasService
   ) { 
-    this.setorPerda = new SetorPerda();
+    
   }
 
   ngOnInit(): void {

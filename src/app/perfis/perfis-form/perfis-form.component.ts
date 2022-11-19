@@ -10,12 +10,12 @@ import { PerfisService } from '../../services/perfis.service';
 })
 export class PerfisFormComponent implements OnInit {
 
-  perfil: Perfil;
+  objeto: Perfil = new Perfil();
 
   constructor(
     private perfisService: PerfisService
   ) { 
-    this.perfil = new Perfil();
+    
   }
 
   ngOnInit(): void {

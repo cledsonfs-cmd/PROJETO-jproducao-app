@@ -10,12 +10,12 @@ import { FolhaObservacoesService } from '../../services/folha-observacoes.servic
 })
 export class FolhaObservacoesFormComponent implements OnInit {
 
-  folhaObservacao: FolhaObservacao;
+  objeto: FolhaObservacao = new FolhaObservacao();
 
   constructor(
     private folhaObservacoesService: FolhaObservacoesService
   ) { 
-    this.folhaObservacao = new FolhaObservacao();
+    
   }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { AlmoxarifadosService } from '../../services/almoxarifados.service';
 })
 export class AlmoxarifadosFormComponent implements OnInit {
 
-  almoxarifado: Almoxarifado;
+  objeto: Almoxarifado = new Almoxarifado();
 
   constructor(
     private almoxarifadosService: AlmoxarifadosService
   ) { 
-    this.almoxarifado = new Almoxarifado();
+    
   }
 
   ngOnInit(): void {

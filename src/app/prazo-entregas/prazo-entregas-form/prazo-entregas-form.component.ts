@@ -9,12 +9,12 @@ import { PrazoEntregasService } from '../../services/prazo-entregas.service';
   styleUrls: ['./prazo-entregas-form.component.css']
 })
 export class PrazoEntregasFormComponent implements OnInit {
-  prazoEntrega: PrazoEntrega;
+  objeto: PrazoEntrega = new PrazoEntrega();
 
   constructor(
     private prazoEntregasServices: PrazoEntregasService
   ) { 
-    this.prazoEntrega = new PrazoEntrega();
+    
   }
 
   ngOnInit(): void {

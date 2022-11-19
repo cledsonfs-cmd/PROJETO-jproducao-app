@@ -10,12 +10,12 @@ import { ChatsService } from '../../services/chats.service';
 })
 export class ChatsFormComponent implements OnInit {
 
-  chat: Chat;
+  objeto: Chat = new Chat();
 
   constructor(
     private chatsService: ChatsService
   ) { 
-    this.chat = new Chat();
+    
   }
 
   ngOnInit(): void {

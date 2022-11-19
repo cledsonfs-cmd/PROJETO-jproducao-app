@@ -9,12 +9,12 @@ import { TipoSetoresService } from '../../services/tipo-setores.service';
   styleUrls: ['./tipo-setores-form.component.css']
 })
 export class TipoSetoresFormComponent implements OnInit {
-  tipoSetor:TipoSetor;
+  objeto:TipoSetor = new TipoSetor();
 
   constructor(
     private tipoSetoresService: TipoSetoresService
   ) { 
-    this.tipoSetor = new TipoSetor();
+    
   }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { LinhaProducoesService } from '../../services/linha-producoes.service';
 })
 export class LinhaProducoesFormComponent implements OnInit {
 
-  linhaProducao: LinhaProducao;
+  objeto: LinhaProducao = new LinhaProducao();
 
   constructor(
     private linhaProducoesService: LinhaProducoesService
   ) { 
-    this.linhaProducao = new LinhaProducao();
+    
   }
 
   ngOnInit(): void {

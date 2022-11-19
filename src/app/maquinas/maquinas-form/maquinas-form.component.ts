@@ -10,12 +10,12 @@ import { MaquinasService } from '../../services/maquinas.service';
 })
 export class MaquinasFormComponent implements OnInit {
 
-  maquina: Maquina;
+  objeto: Maquina = new Maquina();
 
   constructor(
     private maquinasService: MaquinasService
   ) { 
-    this.maquina = new Maquina();
+    
   }
 
   ngOnInit(): void {

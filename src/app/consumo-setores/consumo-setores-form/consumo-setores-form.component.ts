@@ -10,12 +10,12 @@ import { ConsumoSetoresService } from '../../services/consumo-setores.service';
 })
 export class ConsumoSetoresFormComponent implements OnInit {
 
-  consumoSetor: ConsumoSetor;
+  objeto: ConsumoSetor = new ConsumoSetor();
 
   constructor(
     private consumoSetoresService: ConsumoSetoresService
   ) { 
-    this.consumoSetor = new ConsumoSetor();
+    
   }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { DevolucoesService } from '../../services/devolucoes.service';
 })
 export class DevolucoesFormComponent implements OnInit {
 
-  devolucao: Devolucao;
+  objeto: Devolucao = new Devolucao();
 
   constructor(
     private devolucoesService: DevolucoesService
   ) { 
-    this.devolucao = new Devolucao();
+    
   }
 
   ngOnInit(): void {

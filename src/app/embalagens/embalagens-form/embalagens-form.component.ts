@@ -10,12 +10,12 @@ import { EmbalagensService } from '../../services/embalagens.service';
 })
 export class EmbalagensFormComponent implements OnInit {
 
-  embalagem: Embalagem;
+  objeto: Embalagem = new Embalagem();
 
   constructor(
     private embalagensService: EmbalagensService
   ) { 
-    this.embalagem = new Embalagem();
+    
   }
 
   ngOnInit(): void {

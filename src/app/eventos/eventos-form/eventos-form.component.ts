@@ -10,12 +10,12 @@ import { EventosService } from '../../services/eventos.service';
 })
 export class EventosFormComponent implements OnInit {
 
-  evento: Evento;
+  objeto: Evento = new Evento();
 
   constructor(
     private eventesService: EventosService
   ) { 
-    this.evento = new Evento();
+    
   }
 
   ngOnInit(): void {

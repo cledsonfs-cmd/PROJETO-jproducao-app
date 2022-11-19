@@ -10,12 +10,12 @@ import { OrdemProducoesService } from '../../services/ordem-producoes.service';
 })
 export class OrdemProducoesFormComponent implements OnInit {
 
-  ordemProducao: OrdemProducao;
+  objeto: OrdemProducao = new OrdemProducao();
 
   constructor(
     private ordemProducoesService: OrdemProducoesService
   ) { 
-    this.ordemProducao = new OrdemProducao();
+    
   }
 
   ngOnInit(): void {

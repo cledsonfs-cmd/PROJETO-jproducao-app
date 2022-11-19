@@ -10,12 +10,12 @@ import { EstoquesService } from '../../services/estoques.service';
 })
 export class EstoquesFormComponent implements OnInit {
 
-  estoque: Estoque;
+  objeto: Estoque = new Estoque();
 
   constructor(
     private estoquesService: EstoquesService
   ) { 
-    this.estoque = new Estoque();
+    
   }
 
   ngOnInit(): void {

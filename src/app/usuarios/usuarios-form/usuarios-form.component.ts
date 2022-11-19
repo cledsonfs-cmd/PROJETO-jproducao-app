@@ -9,12 +9,12 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrls: ['./usuarios-form.component.css']
 })
 export class UsuariosFormComponent implements OnInit {
-  usuario: Usuario;
+  objeto: Usuario = new Usuario();
 
   constructor(
     private usuariosservice: UsuariosService
   ) { 
-    this.usuario = new Usuario();
+    
   }
 
   ngOnInit(): void {

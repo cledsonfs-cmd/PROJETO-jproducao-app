@@ -9,12 +9,12 @@ import { ReprogramacoesService } from '../../services/reprogramacoes.service';
   styleUrls: ['./reprogramacoes-form.component.css']
 })
 export class ReprogramacoesFormComponent implements OnInit {
-  reprogramacao: Reprogramacao;
+  objeto: Reprogramacao = new Reprogramacao();
 
   constructor(
     private reprogramacoesService: ReprogramacoesService
   ) { 
-    this.reprogramacao = new Reprogramacao();
+    
   }
 
   ngOnInit(): void {

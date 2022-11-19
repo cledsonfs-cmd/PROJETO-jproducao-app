@@ -10,12 +10,12 @@ import { FaturamentosService } from '../../services/faturamentos.service';
 })
 export class FaturamentosFormComponent implements OnInit {
 
-  faturamento: Faturamento;
+  objeto: Faturamento = new Faturamento();
 
   constructor(
     private faturmentosService: FaturamentosService
   ) { 
-    this.faturamento = new Faturamento();
+    
   }
 
   ngOnInit(): void {

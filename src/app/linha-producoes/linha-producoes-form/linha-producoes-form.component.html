@@ -5,18 +5,55 @@
 <div class="container">    
     <form #linhaProducaoForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
-            <div class="col-md-6">
-                <div class="deom-group">
-                    <label>ID:</label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="linhaProducao.id" name=""id>
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">ID</span>
+                    </div>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="objeto.id" name="id">
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="deom-group">
-                    <label>Data Cadastro:</label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="linhaProducao.dataCadastro" name="dataCadastro">
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Cadastro</span>
+                    </div>
+                    <input type="text" class="form-control" disabled="true" [ngModel]="objeto.dataCadastro" name="dataCadastro">
+                </div>
+            </div>            
+        
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Código1</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="objeto.codigo1" name="codigo1">
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Código2</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="objeto.codigo2" name="codigo2">
+                </div>
+            </div>            
         </div>        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Descrição</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="objeto.descricao" name="descricao">
+                </div>
+            </div>                      
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
+            </div>
+        </div> 
     </form>
 </div>

@@ -10,12 +10,12 @@ import { AcessosService } from '../../services/acessos.service';
 })
 export class AcessosFormComponent implements OnInit {
 
-  acesso: Acesso;
+  objeto: Acesso = new Acesso();
 
   constructor(
     private acessosService: AcessosService
   ) { 
-    this.acesso = new Acesso();
+    
   }
 
   ngOnInit(): void {

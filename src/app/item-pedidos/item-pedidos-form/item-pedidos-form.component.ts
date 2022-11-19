@@ -10,12 +10,12 @@ import { ItemPedidosService } from '../../services/item-pedidos.service';
 })
 export class ItemPedidosFormComponent implements OnInit {
 
-  itemPedido: ItemPedido;
+  objeto: ItemPedido = new ItemPedido();
 
   constructor(
     private itemPedidosService: ItemPedidosService
   ) { 
-    this.itemPedido = new ItemPedido();
+    
   }
 
   ngOnInit(): void {

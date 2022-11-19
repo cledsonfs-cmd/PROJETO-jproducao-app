@@ -9,12 +9,12 @@ import { UnidadesService } from '../../services/unidades.service';
   styleUrls: ['./unidades-form.component.css']
 })
 export class UnidadesFormComponent implements OnInit {
-  unidade: Unidade;
+  objeto: Unidade = new Unidade();
 
   constructor(
     private unidadesServices: UnidadesService
   ) { 
-    this.unidade = new Unidade();
+    
   }
 
   ngOnInit(): void {

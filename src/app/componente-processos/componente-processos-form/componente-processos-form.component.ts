@@ -10,12 +10,12 @@ import { ComponenteProcessosService } from '../../services/componente-processos.
 })
 export class ComponenteProcessosFormComponent implements OnInit {
 
-  componenteProcesso: ComponenteProcesso;
+  objeto: ComponenteProcesso = new ComponenteProcesso();
 
   constructor(
     private componenteProcessosService: ComponenteProcessosService
   ) { 
-    this.componenteProcesso = new ComponenteProcesso();
+    
   }
 
   ngOnInit(): void {

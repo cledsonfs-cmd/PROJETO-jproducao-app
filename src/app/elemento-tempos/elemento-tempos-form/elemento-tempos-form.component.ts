@@ -10,12 +10,12 @@ import { ElementoTemposService } from '../../services/elemento-tempos.service';
 })
 export class ElementoTemposFormComponent implements OnInit {
 
-  elementoTempo: ElementoTempo;
+  objeto: ElementoTempo = new ElementoTempo();
 
   constructor(
     private elementoTemposService: ElementoTemposService
   ) { 
-    this.elementoTempo = new ElementoTempo();
+    
   }
 
   ngOnInit(): void {

@@ -9,12 +9,12 @@ import { ProcessosService } from '../../services/processos.service';
   styleUrls: ['./processos-form.component.css']
 })
 export class ProcessosFormComponent implements OnInit {
-  processo: Processo;
+  objeto: Processo = new Processo();
 
   constructor(
     private processosService: ProcessosService
   ) { 
-    this.processo = new Processo();
+    
   }
 
   ngOnInit(): void {

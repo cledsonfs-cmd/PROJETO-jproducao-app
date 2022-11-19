@@ -10,12 +10,12 @@ import { SetoresService } from '../../services/setores.service';
 })
 export class SetoresFormComponent implements OnInit {
 
-  setor: Setor;
+  objeto: Setor = new Setor();
 
   constructor(
     private setoresService: SetoresService
   ) {
-    this.setor = new Setor();
+    
    }
 
   ngOnInit(): void {

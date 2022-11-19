@@ -10,12 +10,12 @@ import { PopsService } from '../../services/pops.service';
 })
 export class PopsFormComponent implements OnInit {
 
-  pop: Pop;
+  objeto: Pop = new Pop();
 
   constructor(
     private popsService: PopsService
   ) {
-    this.pop = new Pop();
+    
    }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { FolhaElementosService } from '../../services/folha-elementos.service';
 })
 export class FolhaElementosFormComponent implements OnInit {
 
-  folhaElemento: FolhaElemento;
+  objeto: FolhaElemento = new FolhaElemento();
 
   constructor(
     private folhaElementosService: FolhaElementosService
   ) { 
-    this.folhaElemento = new FolhaElemento();
+    
   }
 
   ngOnInit(): void {

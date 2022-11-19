@@ -10,12 +10,12 @@ import { EquipamentosService } from '../../services/equipamentos.service';
 })
 export class EquipamentosFormComponent implements OnInit {
 
-  equipamento: Equipamento;
+  objeto: Equipamento = new Equipamento();
 
   constructor(
     private equipamentosServices: EquipamentosService
   ) { 
-    this.equipamento = new Equipamento();
+    
   }
 
   ngOnInit(): void {

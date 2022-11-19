@@ -9,12 +9,12 @@ import { RepresentantesService } from '../../services/representantes.service';
   styleUrls: ['./representantes-form.component.css']
 })
 export class RepresentantesFormComponent implements OnInit {
-  representante: Representante;
+  objeto: Representante = new Representante();
 
   constructor(
     private representantesService: RepresentantesService
   ) { 
-    this.representante = new Representante;
+    
   }
 
   ngOnInit(): void {

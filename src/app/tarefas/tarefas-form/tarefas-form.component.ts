@@ -9,12 +9,12 @@ import { TarefasService } from '../../services/tarefas.service';
   styleUrls: ['./tarefas-form.component.css']
 })
 export class TarefasFormComponent implements OnInit {
-  tarefa: Tarefa;
+  objeto: Tarefa = new Tarefa();
 
   constructor(
     private tarefasService: TarefasService
   ) { 
-    this.tarefa = new Tarefa();
+    
   }
 
   ngOnInit(): void {

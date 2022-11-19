@@ -9,12 +9,12 @@ import { ClientesService } from '../../services/clientes.service';
   styleUrls: ['./clientes-form.component.css']
 })
 export class ClientesFormComponent implements OnInit {
-  cliente: Cliente;
+  objeto: Cliente = new Cliente();
 
   constructor(
     private clientesService: ClientesService
   ) { 
-    this.cliente = new Cliente();
+    
   }
 
   ngOnInit(): void {

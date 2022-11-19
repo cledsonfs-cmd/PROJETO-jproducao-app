@@ -9,12 +9,12 @@ import { SubSetoresService } from '../../services/sub-setores.service';
   styleUrls: ['./sub-setores-form.component.css']
 })
 export class SubSetoresFormComponent implements OnInit {
-  subSetor: SubSetor;
+  objeto: SubSetor = new SubSetor();
 
   constructor(
     private subSetoresService: SubSetoresService
   ) { 
-    this.subSetor = new SubSetor();
+    
   }
 
   ngOnInit(): void {

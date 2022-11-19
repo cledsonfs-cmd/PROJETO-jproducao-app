@@ -10,12 +10,12 @@ import { OperacoesService } from 'src/app/services/operacoes.service';
   styleUrls: ['./operacoes-form.component.css']
 })
 export class OperacoesFormComponent implements OnInit {
-  operacao: Operacao;
+  objeto: Operacao = new Operacao();
 
   constructor(
     private operacoesService: OperacoesService
   ) { 
-    this.operacao = new Operacao();
+    
   }
 
   ngOnInit(): void {

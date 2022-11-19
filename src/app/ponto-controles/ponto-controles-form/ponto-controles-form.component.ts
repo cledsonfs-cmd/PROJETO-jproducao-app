@@ -10,12 +10,12 @@ import { PontoControlesService } from '../../services/ponto-controles.service';
 })
 export class PontoControlesFormComponent implements OnInit {
 
-  pontoControle: PontoControle;
+  objeto: PontoControle = new PontoControle();
 
   constructor(
     private pontoControlesService: PontoControlesService
   ) { 
-    this.pontoControle = new PontoControle();
+    
   }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { ComponenteMateriaPrimasService } from '../../services/componente-materi
 })
 export class ComponenteMateriaPrimasFormComponent implements OnInit {
 
-  componenteMateriaPrima: ComponenteMateriaPrima;
+  objeto: ComponenteMateriaPrima = new ComponenteMateriaPrima();
 
   constructor(
     private componenteMateriaPrimasService: ComponenteMateriaPrimasService
   ) { 
-    this.componenteMateriaPrima = new ComponenteMateriaPrima();
+    
   }
 
   ngOnInit(): void {

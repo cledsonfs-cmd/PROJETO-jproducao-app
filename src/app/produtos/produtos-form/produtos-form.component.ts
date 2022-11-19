@@ -9,12 +9,12 @@ import { ProdutosService } from '../../services/produtos.service';
   styleUrls: ['./produtos-form.component.css']
 })
 export class ProdutosFormComponent implements OnInit {
-  produto: Produto;
+  objeto: Produto = new Produto();
 
   constructor(
     private produtosService: ProdutosService
   ) { 
-    this.produto = new Produto;
+    
   }
 
   ngOnInit(): void {

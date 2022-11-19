@@ -10,12 +10,12 @@ import { LogsService } from '../../services/logs.service';
 })
 export class LogsFormComponent implements OnInit {
 
-  log: Log;
+  objeto: Log = new Log();
 
   constructor(
     private logsService: LogsService
   ) {
-    this.log = new Log();
+    
    }
 
   ngOnInit(): void {

@@ -10,12 +10,12 @@ import { MotivoPerdasService } from '../../services/motivo-perdas.service';
 })
 export class MotivoPerdasFormComponent implements OnInit {
 
-  motivoPerda: MotivoPerda;
+  objeto: MotivoPerda = new MotivoPerda();
 
   constructor(
     private motivoPerdasService: MotivoPerdasService
   ) { 
-    this.motivoPerda = new MotivoPerda();
+    
   }
 
   ngOnInit(): void {

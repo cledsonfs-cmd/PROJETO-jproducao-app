@@ -10,12 +10,12 @@ import { ElementosService } from '../../services/elementos.service';
 })
 export class ElementosFormComponent implements OnInit {
 
-  elemento: Elemento;
+  objeto: Elemento = new Elemento();
 
   constructor(
     private elementosService: ElementosService
   ) { 
-    this.elemento = new Elemento();
+    
   }
 
   ngOnInit(): void {

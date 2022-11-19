@@ -10,12 +10,12 @@ import { CarteirasService } from '../../services/carteiras.service';
 })
 export class CarteirasFormComponent implements OnInit {
 
-  carteira: Carteira;
+  objeto: Carteira = new Carteira();
 
   constructor(
     private carteirasService: CarteirasService
   ) { 
-    this.carteira = new Carteira();
+    
   }
 
   ngOnInit(): void {

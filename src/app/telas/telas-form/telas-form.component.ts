@@ -9,12 +9,12 @@ import { TelasService } from '../../services/telas.service';
   styleUrls: ['./telas-form.component.css']
 })
 export class TelasFormComponent implements OnInit {
-  tela: Tela;
+  objeto: Tela = new Tela();
 
   constructor(
     private telasService: TelasService
   ) {
-    this.tela = new Tela();
+    
    }
 
   ngOnInit(): void {

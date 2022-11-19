@@ -1,19 +1,19 @@
 export class Empresa {
     id: number;
-    dataCadastro: string;
-    codigoEmpresa: string;
-	razaoSocial: string;
-	nomeReduzido: string;
-	cnpj: string;
-	rua: string;
-	bairro: string;
-	municipio: string;
-	uf: string;
-	cep: string;
-	pasta: string;
-	pastaHistorico: string;
-	inscricaoEstadual: string;
-	codigoBarras: string;
+    dataCadastro: String;
+    codigoEmpresa: String;
+	razaoSocial: String;
+	nomeReduzido: String;
+	cnpj: String;
+	rua: String;
+	bairro: String;
+	municipio: String;
+	uf: String;
+	cep: String;
+	pasta: String;
+	pastaHistorico: String;
+	inscricaoEstadual: String;
+	codigoBarras: String;
 
     constructor() {  
         this.id = 0;

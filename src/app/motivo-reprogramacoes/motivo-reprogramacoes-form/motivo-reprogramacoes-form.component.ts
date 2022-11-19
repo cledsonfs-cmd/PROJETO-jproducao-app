@@ -10,12 +10,12 @@ import { MotivoReprogramacoesService } from '../../services/motivo-reprogramacoe
 })
 export class MotivoReprogramacoesFormComponent implements OnInit {
 
-  motivoReprogramacao: MotivoReprogramacao;
+  objeto: MotivoReprogramacao = new MotivoReprogramacao();
 
   constructor(
     private motivoReprogramacoesService: MotivoReprogramacoesService
   ) { 
-    this.motivoReprogramacao = new MotivoReprogramacao();
+    
   }
 
   ngOnInit(): void {

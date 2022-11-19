@@ -10,12 +10,12 @@ import { CartaoOpsService } from '../../services/cartao-ops.service';
 })
 export class CartaoOpsFormComponent implements OnInit {
 
-  cartaOp: CartaoOp;
+  objeto: CartaoOp = new CartaoOp();
 
   constructor(
     private cartaoOpsService: CartaoOpsService
   ) { 
-    this.cartaOp = new CartaoOp();
+    
   }
 
   ngOnInit(): void {

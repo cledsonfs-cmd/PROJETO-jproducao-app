@@ -10,12 +10,12 @@ import { MenusService } from '../../services/menus.service';
 })
 export class MenusFormComponent implements OnInit {
 
-  menu: Menu;
+  objeto: Menu = new Menu();
 
   constructor(
     private menusService: MenusService
   ) {
-    this.menu = new Menu();
+    
    }
 
   ngOnInit(): void {

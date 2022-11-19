@@ -10,12 +10,12 @@ import { LotesService } from '../../services/lotes.service';
 })
 export class LotesFormComponent implements OnInit {
 
-  lote: Lote;
+  objeto: Lote = new Lote();
 
   constructor(
     private lotesService: LotesService
   ) { 
-    this.lote = new Lote();
+    
   }
 
   ngOnInit(): void {
