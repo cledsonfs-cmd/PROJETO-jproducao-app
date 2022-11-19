@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Chat } from '../chat'
+import { Chat } from '../chat';
+import { ChatsService } from '../../services/chats.service';
 
 @Component({
   selector: 'app-chats-form',
@@ -11,7 +12,9 @@ export class ChatsFormComponent implements OnInit {
 
   chat: Chat;
 
-  constructor() { 
+  constructor(
+    private chatsService: ChatsService
+  ) { 
     this.chat = new Chat();
   }
 

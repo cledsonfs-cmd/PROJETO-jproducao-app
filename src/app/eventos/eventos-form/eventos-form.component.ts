@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Evento } from '../evento'
+import { Evento } from '../evento';
+import { EventosService } from '../../services/eventos.service';
 
 @Component({
   selector: 'app-eventos-form',
@@ -11,7 +12,9 @@ export class EventosFormComponent implements OnInit {
 
   evento: Evento;
 
-  constructor() { 
+  constructor(
+    private eventesService: EventosService
+  ) { 
     this.evento = new Evento();
   }
 

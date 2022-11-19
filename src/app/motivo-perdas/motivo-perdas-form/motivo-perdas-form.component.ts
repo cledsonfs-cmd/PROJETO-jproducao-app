@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MotivoPerda } from '../motivo-perda'
+import { MotivoPerda } from '../motivo-perda';
+import { MotivoPerdasService } from '../../services/motivo-perdas.service';
 
 @Component({
   selector: 'app-motivo-perdas-form',
@@ -11,7 +12,9 @@ export class MotivoPerdasFormComponent implements OnInit {
 
   motivoPerda: MotivoPerda;
 
-  constructor() { 
+  constructor(
+    private motivoPerdasService: MotivoPerdasService
+  ) { 
     this.motivoPerda = new MotivoPerda();
   }
 

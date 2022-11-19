@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Reprogramacao } from '../reprogramacao'
+import { Reprogramacao } from '../reprogramacao';
+import { ReprogramacoesService } from '../../services/reprogramacoes.service';
 
 @Component({
   selector: 'app-reprogramacoes-form',
@@ -10,7 +11,9 @@ import { Reprogramacao } from '../reprogramacao'
 export class ReprogramacoesFormComponent implements OnInit {
   reprogramacao: Reprogramacao;
 
-  constructor() { 
+  constructor(
+    private reprogramacoesService: ReprogramacoesService
+  ) { 
     this.reprogramacao = new Reprogramacao();
   }
 

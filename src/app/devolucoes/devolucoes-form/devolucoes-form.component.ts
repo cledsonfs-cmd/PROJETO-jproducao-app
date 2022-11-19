@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Devolucao } from '../devolucao'
+import { Devolucao } from '../devolucao';
+import { DevolucoesService } from '../../services/devolucoes.service';
 
 @Component({
   selector: 'app-devolucoes-form',
@@ -11,7 +12,9 @@ export class DevolucoesFormComponent implements OnInit {
 
   devolucao: Devolucao;
 
-  constructor() { 
+  constructor(
+    private devolucoesService: DevolucoesService
+  ) { 
     this.devolucao = new Devolucao();
   }
 

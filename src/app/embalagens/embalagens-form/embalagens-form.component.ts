@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Embalagem } from '../embalagem'
+import { Embalagem } from '../embalagem';
+import { EmbalagensService } from '../../services/embalagens.service';
 
 @Component({
   selector: 'app-embalagens-form',
@@ -11,7 +12,9 @@ export class EmbalagensFormComponent implements OnInit {
 
   embalagem: Embalagem;
 
-  constructor() { 
+  constructor(
+    private embalagensService: EmbalagensService
+  ) { 
     this.embalagem = new Embalagem();
   }
 

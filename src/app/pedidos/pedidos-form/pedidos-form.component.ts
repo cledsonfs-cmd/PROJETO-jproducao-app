@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Pedido } from '../pedido'
+import { Pedido } from '../pedido';
+import { PedidosService } from '../../services/pedidos.service';
 
 @Component({
   selector: 'app-pedidos-form',
@@ -11,7 +12,9 @@ export class PedidosFormComponent implements OnInit {
 
   pedido: Pedido;
 
-  constructor() { 
+  constructor(
+    private pedidosService: PedidosService
+  ) { 
     this.pedido = new Pedido();
   }
 

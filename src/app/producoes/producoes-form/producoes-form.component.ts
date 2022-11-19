@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Producao } from '../producao'
+import { Producao } from '../producao';
+import { ProducoesService } from '../../services/producoes.service';
 
 @Component({
   selector: 'app-producoes-form',
@@ -10,7 +11,9 @@ import { Producao } from '../producao'
 export class ProducoesFormComponent implements OnInit {
   producao: Producao;
 
-  constructor() { 
+  constructor(
+    private producoesService: ProducoesService
+  ) { 
     this.producao = new Producao();
   }
 

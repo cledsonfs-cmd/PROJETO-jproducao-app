@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Unidade } from '../unidade'
+import { Unidade } from '../unidade';
+import { UnidadesService } from '../../services/unidades.service';
 
 @Component({
   selector: 'app-unidades-form',
@@ -10,7 +11,9 @@ import { Unidade } from '../unidade'
 export class UnidadesFormComponent implements OnInit {
   unidade: Unidade;
 
-  constructor() { 
+  constructor(
+    private unidadesServices: UnidadesService
+  ) { 
     this.unidade = new Unidade();
   }
 

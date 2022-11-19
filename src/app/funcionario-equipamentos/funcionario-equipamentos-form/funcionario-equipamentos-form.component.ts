@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FuncionarioEquipamento } from '../funcionario-equipamento'
+import { FuncionarioEquipamento } from '../funcionario-equipamento';
+import { FuncionarioEquipamentosService } from '../../services/funcionario-equipamentos.service';
 
 @Component({
   selector: 'app-funcionario-equipamentos-form',
@@ -11,7 +12,9 @@ export class FuncionarioEquipamentosFormComponent implements OnInit {
 
   funcionarioEquipamento: FuncionarioEquipamento;
 
-  constructor() { 
+  constructor(
+    private funcionarioEquipamentosService: FuncionarioEquipamentosService
+  ) { 
     this.funcionarioEquipamento = new FuncionarioEquipamento();
   }
 

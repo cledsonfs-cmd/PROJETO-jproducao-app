@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Faturamento } from '../faturamento'
+import { Faturamento } from '../faturamento';
+import { FaturamentosService } from '../../services/faturamentos.service';
 
 @Component({
   selector: 'app-faturamentos-form',
@@ -11,7 +12,9 @@ export class FaturamentosFormComponent implements OnInit {
 
   faturamento: Faturamento;
 
-  constructor() { 
+  constructor(
+    private faturmentosService: FaturamentosService
+  ) { 
     this.faturamento = new Faturamento();
   }
 

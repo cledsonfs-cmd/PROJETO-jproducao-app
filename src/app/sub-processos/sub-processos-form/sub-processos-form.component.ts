@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SubProcesso } from '../sub-processo'
+import { SubProcesso } from '../sub-processo';
+import { SubProcessosService } from '../../services/sub-processos.service';
 
 @Component({
   selector: 'app-sub-processos-form',
@@ -10,7 +11,9 @@ import { SubProcesso } from '../sub-processo'
 export class SubProcessosFormComponent implements OnInit {
   subProcesso: SubProcesso;
 
-  constructor() { 
+  constructor(
+    private subProcessosServices: SubProcessosService
+  ) { 
     this.subProcesso = new SubProcesso();
   }
 

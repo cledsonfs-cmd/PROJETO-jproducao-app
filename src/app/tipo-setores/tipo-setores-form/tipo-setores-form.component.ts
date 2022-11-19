@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TipoSetor } from '../tipo-setor'
+import { TipoSetor } from '../tipo-setor';
+import { TipoSetoresService } from '../../services/tipo-setores.service';
 
 @Component({
   selector: 'app-tipo-setores-form',
@@ -10,7 +11,9 @@ import { TipoSetor } from '../tipo-setor'
 export class TipoSetoresFormComponent implements OnInit {
   tipoSetor:TipoSetor;
 
-  constructor() { 
+  constructor(
+    private tipoSetoresService: TipoSetoresService
+  ) { 
     this.tipoSetor = new TipoSetor();
   }
 

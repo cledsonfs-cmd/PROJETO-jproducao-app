@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PrazoEntrega } from '../prazo-entrega'
+import { PrazoEntrega } from '../prazo-entrega';
+import { PrazoEntregasService } from '../../services/prazo-entregas.service';
 
 @Component({
   selector: 'app-prazo-entregas-form',
@@ -10,7 +11,9 @@ import { PrazoEntrega } from '../prazo-entrega'
 export class PrazoEntregasFormComponent implements OnInit {
   prazoEntrega: PrazoEntrega;
 
-  constructor() { 
+  constructor(
+    private prazoEntregasServices: PrazoEntregasService
+  ) { 
     this.prazoEntrega = new PrazoEntrega();
   }
 

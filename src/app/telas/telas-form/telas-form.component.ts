@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Tela } from '../tela'
+import { Tela } from '../tela';
+import { TelasService } from '../../services/telas.service';
 
 @Component({
   selector: 'app-telas-form',
@@ -10,7 +11,9 @@ import { Tela } from '../tela'
 export class TelasFormComponent implements OnInit {
   tela: Tela;
 
-  constructor() {
+  constructor(
+    private telasService: TelasService
+  ) {
     this.tela = new Tela();
    }
 

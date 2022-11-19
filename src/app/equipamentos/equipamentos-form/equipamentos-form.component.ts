@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Equipamento } from '../equipamento'
+import { Equipamento } from '../equipamento';
+import { EquipamentosService } from '../../services/equipamentos.service';
 
 @Component({
   selector: 'app-equipamentos-form',
@@ -11,7 +12,9 @@ export class EquipamentosFormComponent implements OnInit {
 
   equipamento: Equipamento;
 
-  constructor() { 
+  constructor(
+    private equipamentosServices: EquipamentosService
+  ) { 
     this.equipamento = new Equipamento();
   }
 

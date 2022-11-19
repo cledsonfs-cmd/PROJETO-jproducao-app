@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Log } from '../log'
+import { Log } from '../log';
+import { LogsService } from '../../services/logs.service';
 
 @Component({
   selector: 'app-logs-form',
@@ -11,7 +12,9 @@ export class LogsFormComponent implements OnInit {
 
   log: Log;
 
-  constructor() {
+  constructor(
+    private logsService: LogsService
+  ) {
     this.log = new Log();
    }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ItemPedido } from '../item-pedido'
+import { ItemPedido } from '../item-pedido';
+import { ItemPedidosService } from '../../services/item-pedidos.service';
 
 @Component({
   selector: 'app-item-pedidos-form',
@@ -11,7 +12,9 @@ export class ItemPedidosFormComponent implements OnInit {
 
   itemPedido: ItemPedido;
 
-  constructor() { 
+  constructor(
+    private itemPedidosService: ItemPedidosService
+  ) { 
     this.itemPedido = new ItemPedido();
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MovimentoSetor } from '../movimento-setor'
+import { MovimentoSetor } from '../movimento-setor';
+import { MovimentoSetoresService } from '../../services/movimento-setores.service';
 
 @Component({
   selector: 'app-movimento-setores-form',
@@ -10,7 +11,9 @@ import { MovimentoSetor } from '../movimento-setor'
 export class MovimentoSetoresFormComponent implements OnInit {
   movimentoSetor: MovimentoSetor;
 
-  constructor() { 
+  constructor(
+    private movimentoSetoresServices: MovimentoSetoresService
+  ) { 
     this.movimentoSetor = new MovimentoSetor();
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Usuario } from '../usuario'
+import { Usuario } from '../usuario';
+import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-usuarios-form',
@@ -10,7 +11,9 @@ import { Usuario } from '../usuario'
 export class UsuariosFormComponent implements OnInit {
   usuario: Usuario;
 
-  constructor() { 
+  constructor(
+    private usuariosservice: UsuariosService
+  ) { 
     this.usuario = new Usuario();
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MotivoReprogramacao } from '../motivo-reprogramacao'
+import { MotivoReprogramacao } from '../motivo-reprogramacao';
+import { MotivoReprogramacoesService } from '../../services/motivo-reprogramacoes.service';
 
 @Component({
   selector: 'app-motivo-reprogramacoes-form',
@@ -11,7 +12,9 @@ export class MotivoReprogramacoesFormComponent implements OnInit {
 
   motivoReprogramacao: MotivoReprogramacao;
 
-  constructor() { 
+  constructor(
+    private motivoReprogramacoesService: MotivoReprogramacoesService
+  ) { 
     this.motivoReprogramacao = new MotivoReprogramacao();
   }
 

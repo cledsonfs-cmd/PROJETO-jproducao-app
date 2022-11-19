@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Menu } from '../menu'
+import { Menu } from '../menu';
+import { MenusService } from '../../services/menus.service';
 
 @Component({
   selector: 'app-menus-form',
@@ -11,7 +12,9 @@ export class MenusFormComponent implements OnInit {
 
   menu: Menu;
 
-  constructor() {
+  constructor(
+    private menusService: MenusService
+  ) {
     this.menu = new Menu();
    }
 

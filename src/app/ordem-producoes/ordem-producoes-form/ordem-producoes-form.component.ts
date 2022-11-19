@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { OrdemProducao } from '../ordem-producao'
+import { OrdemProducao } from '../ordem-producao';
+import { OrdemProducoesService } from '../../services/ordem-producoes.service';
 
 @Component({
   selector: 'app-ordem-producoes-form',
@@ -11,7 +12,9 @@ export class OrdemProducoesFormComponent implements OnInit {
 
   ordemProducao: OrdemProducao;
 
-  constructor() { 
+  constructor(
+    private ordemProducoesService: OrdemProducoesService
+  ) { 
     this.ordemProducao = new OrdemProducao();
   }
 

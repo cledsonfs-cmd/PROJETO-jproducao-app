@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SetorPerda } from '../setor-perda'
+import { SetorPerda } from '../setor-perda';
+import { SetorPerdasService } from '../../services/setor-perdas.service';
 
 @Component({
   selector: 'app-setor-perdas-form',
@@ -10,7 +11,9 @@ import { SetorPerda } from '../setor-perda'
 export class SetorPerdasFormComponent implements OnInit {
   setorPerda: SetorPerda;
 
-  constructor() { 
+  constructor(
+    private setorPerdasService: SetorPerdasService
+  ) { 
     this.setorPerda = new SetorPerda();
   }
 

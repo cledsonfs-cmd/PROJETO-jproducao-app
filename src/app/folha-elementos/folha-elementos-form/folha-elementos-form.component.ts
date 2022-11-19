@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FolhaElemento } from '../folha-elemento'
+import { FolhaElemento } from '../folha-elemento';
+import { FolhaElementosService } from '../../services/folha-elementos.service';
 
 @Component({
   selector: 'app-folha-elementos-form',
@@ -11,7 +12,9 @@ export class FolhaElementosFormComponent implements OnInit {
 
   folhaElemento: FolhaElemento;
 
-  constructor() { 
+  constructor(
+    private folhaElementosService: FolhaElementosService
+  ) { 
     this.folhaElemento = new FolhaElemento();
   }
 

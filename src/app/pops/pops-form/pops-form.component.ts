@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Pop } from '../pop'
+import { Pop } from '../pop';
+import { PopsService } from '../../services/pops.service';
 
 @Component({
   selector: 'app-pops-form',
@@ -11,7 +12,9 @@ export class PopsFormComponent implements OnInit {
 
   pop: Pop;
 
-  constructor() {
+  constructor(
+    private popsService: PopsService
+  ) {
     this.pop = new Pop();
    }
 

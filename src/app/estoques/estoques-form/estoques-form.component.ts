@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Estoque } from '../estoque'
+import { Estoque } from '../estoque';
+import { EstoquesService } from '../../services/estoques.service';
 
 @Component({
   selector: 'app-estoques-form',
@@ -11,7 +12,9 @@ export class EstoquesFormComponent implements OnInit {
 
   estoque: Estoque;
 
-  constructor() { 
+  constructor(
+    private estoquesService: EstoquesService
+  ) { 
     this.estoque = new Estoque();
   }
 

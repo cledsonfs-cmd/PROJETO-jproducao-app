@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Perfil } from '../perfil'
+import { Perfil } from '../perfil';
+import { PerfisService } from '../../services/perfis.service';
 
 @Component({
   selector: 'app-perfis-form',
@@ -11,7 +12,9 @@ export class PerfisFormComponent implements OnInit {
 
   perfil: Perfil;
 
-  constructor() { 
+  constructor(
+    private perfisService: PerfisService
+  ) { 
     this.perfil = new Perfil();
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FolhaObservacao } from '../folha-observacao'
+import { FolhaObservacao } from '../folha-observacao';
+import { FolhaObservacoesService } from '../../services/folha-observacoes.service';
 
 @Component({
   selector: 'app-folha-observacoes-form',
@@ -11,7 +12,9 @@ export class FolhaObservacoesFormComponent implements OnInit {
 
   folhaObservacao: FolhaObservacao;
 
-  constructor() { 
+  constructor(
+    private folhaObservacoesService: FolhaObservacoesService
+  ) { 
     this.folhaObservacao = new FolhaObservacao();
   }
 

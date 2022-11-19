@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Processo } from '../processo'
+import { Processo } from '../processo';
+import { ProcessosService } from '../../services/processos.service';
 
 @Component({
   selector: 'app-processos-form',
@@ -10,7 +11,9 @@ import { Processo } from '../processo'
 export class ProcessosFormComponent implements OnInit {
   processo: Processo;
 
-  constructor() { 
+  constructor(
+    private processosService: ProcessosService
+  ) { 
     this.processo = new Processo();
   }
 

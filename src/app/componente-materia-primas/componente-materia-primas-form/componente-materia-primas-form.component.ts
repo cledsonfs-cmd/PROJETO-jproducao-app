@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ComponenteMateriaPrima } from '../componente-materia-prima'
+import { ComponenteMateriaPrima } from '../componente-materia-prima';
+import { ComponenteMateriaPrimasService } from '../../services/componente-materia-primas.service';
 
 @Component({
   selector: 'app-componente-materia-primas-form',
@@ -11,7 +12,9 @@ export class ComponenteMateriaPrimasFormComponent implements OnInit {
 
   componenteMateriaPrima: ComponenteMateriaPrima;
 
-  constructor() { 
+  constructor(
+    private componenteMateriaPrimasService: ComponenteMateriaPrimasService
+  ) { 
     this.componenteMateriaPrima = new ComponenteMateriaPrima();
   }
 

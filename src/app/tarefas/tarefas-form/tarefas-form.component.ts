@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Tarefa } from '../tarefa'
+import { Tarefa } from '../tarefa';
+import { TarefasService } from '../../services/tarefas.service';
 
 @Component({
   selector: 'app-tarefas-form',
@@ -10,7 +11,9 @@ import { Tarefa } from '../tarefa'
 export class TarefasFormComponent implements OnInit {
   tarefa: Tarefa;
 
-  constructor() { 
+  constructor(
+    private tarefasService: TarefasService
+  ) { 
     this.tarefa = new Tarefa();
   }
 

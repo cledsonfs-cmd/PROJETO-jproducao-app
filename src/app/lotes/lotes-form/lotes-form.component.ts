@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Lote } from '../lote'
+import { Lote } from '../lote';
+import { LotesService } from '../../services/lotes.service';
 
 @Component({
   selector: 'app-lotes-form',
@@ -11,7 +12,9 @@ export class LotesFormComponent implements OnInit {
 
   lote: Lote;
 
-  constructor() { 
+  constructor(
+    private lotesService: LotesService
+  ) { 
     this.lote = new Lote();
   }
 
