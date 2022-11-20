@@ -13,6 +13,22 @@ export class AcessosService {
   ) { }
 
   getAll() : Observable<any>{    
-    return this.http.get<Acesso[]>(`http://localhost:8080/api/acesso`);
+    return this.http.get<any[]>(`http://localhost:8080/api/acesso`);
+  }
+
+  get(id: number): Observable<any>{
+    return this.http.get<any>(`http://localhost:8080/api/acesso/${id}`);
+  }
+
+  save( objeto: Acesso): Observable<any>{
+    return this.http.post<any>('http://localhost:8080/api/acesso',objeto);
+  }
+
+  update( objeto: Acesso): Observable<any>{
+    return this.http.put<any>(`http://localhost:8080/api/acesso`,objeto);
+  }
+
+  delete( id: number): Observable<any>{
+    return this.http.delete<any>(`http://localhost:8080/api/acesso/${id}`);
   }
 }
