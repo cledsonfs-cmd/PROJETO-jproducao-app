@@ -1,9 +1,11 @@
+import { Setor } from "../setores/setor";
+
 export class Maquina {
     id: number;
     dataCadastro: string;
     descricao: string;
     observacao: string;
-    id_setor: number;
+    setor: Setor;
     update: string;
 
     constructor() {  
@@ -11,7 +13,7 @@ export class Maquina {
         this.dataCadastro = '';
         this.descricao = '';
         this.observacao = '';
-        this.id_setor = 0;
+        this.setor = new Setor();
         this.update = '';
     }
 }
