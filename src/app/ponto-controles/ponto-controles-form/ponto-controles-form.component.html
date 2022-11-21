@@ -20,7 +20,30 @@
                     </div>
                     <input type="text" class="form-control" disabled="true" [ngModel]="objeto.dataCadastro" name="dataCadastro">
                 </div>
-            </div>                                          
+            </div> 
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Setor</button>
+                      <div class="dropdown-menu">
+                        <div *ngFor="let setor of setores">
+                            <a class="dropdown-item" (click)="selecionarSetor(setor.id)">{{ setor.descricao }}</a>
+                        </div>                        
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.setor.descricao">
+                  </div>
+            </div>                                                     
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Descrição</span>
+                    </div>
+                    <input type="text" class="form-control" [ngModel]="objeto.descricao" name="descricao">
+                </div>
+            </div>   
         </div>
         <div class="row">
             <div class="col-md-12">

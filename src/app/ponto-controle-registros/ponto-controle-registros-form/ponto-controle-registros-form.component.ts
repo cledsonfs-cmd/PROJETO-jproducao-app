@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ElementoTempo } from '../elemento-tempo';
-import { ElementoTemposService } from '../../services/elemento-tempos.service';
+import { PontoControleRegistros } from '../ponto-controle-registros';
+import { PontoControleRegistroService } from '../../services/ponto-controle-registro.service';
 
 @Component({
-  selector: 'app-elemento-tempos-form',
-  templateUrl: './elemento-tempos-form.component.html',
-  styleUrls: ['./elemento-tempos-form.component.css']
+  selector: 'app-ponto-controle-registros-form',
+  templateUrl: './ponto-controle-registros-form.component.html',
+  styleUrls: ['./ponto-controle-registros-form.component.css']
 })
-export class ElementoTemposFormComponent implements OnInit {
+export class PontoControleRegistrosFormComponent implements OnInit {
   id: number = 0;
   success: boolean = false;
   errros: String[] = [];
-  objeto: ElementoTempo = new ElementoTempo();
-
+  objeto: PontoControleRegistros = new PontoControleRegistros();
   constructor(
-    private service: ElementoTemposService
-  ) { 
-    
-  }
+    private service: PontoControleRegistroService
+  ) { }
 
   ngOnInit(): void {
   }

@@ -9,11 +9,13 @@ import { CarteirasService } from '../../services/carteiras.service';
   styleUrls: ['./carteiras-form.component.css']
 })
 export class CarteirasFormComponent implements OnInit {
-
+  id: number = 0;
+  success: boolean = false;
+  errros: String[] = [];
   objeto: Carteira = new Carteira();
 
   constructor(
-    private carteirasService: CarteirasService
+    private service: CarteirasService
   ) { 
     
   }
@@ -21,7 +23,27 @@ export class CarteirasFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit(){    
+    if(this.id > 0){
+      this.service
+        .update(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+        }, errorResponse => { this.errros = ['Erro ao atualizar.'];
+      });
+    }else{      
+      this.service.save(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+      this.objeto = response;        
+  },
+      errorResponse => { this.errros = errorResponse.errros;
+      this.success = false;        
+    });
+    this.success = true;
+  }
   }
 
 }

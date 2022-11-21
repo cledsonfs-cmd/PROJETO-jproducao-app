@@ -1,7 +1,6 @@
 export class Empresa {
     id: number;
     dataCadastro: String;
-    codigoEmpresa: String;
 	razaoSocial: String;
 	nomeReduzido: String;
 	cnpj: String;
@@ -18,7 +17,6 @@ export class Empresa {
     constructor() {  
         this.id = 0;
         this.dataCadastro = '';
-        this.codigoEmpresa = '';
         this.razaoSocial = '';
         this.nomeReduzido = '';
         this.cnpj = '';

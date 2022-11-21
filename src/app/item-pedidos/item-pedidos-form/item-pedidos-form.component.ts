@@ -9,11 +9,13 @@ import { ItemPedidosService } from '../../services/item-pedidos.service';
   styleUrls: ['./item-pedidos-form.component.css']
 })
 export class ItemPedidosFormComponent implements OnInit {
-
+  id: number = 0;
+  success: boolean = false;
+  errros: String[] = [];
   objeto: ItemPedido = new ItemPedido();
 
   constructor(
-    private itemPedidosService: ItemPedidosService
+    private service: ItemPedidosService
   ) { 
     
   }
@@ -22,6 +24,26 @@ export class ItemPedidosFormComponent implements OnInit {
   }
 
   onSubmit(){
+    if(this.id > 0){
+      this.service
+        .update(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+        }, errorResponse => { this.errros = ['Erro ao atualizar.'];
+      });
+    }else{      
+      this.service.save(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+      this.objeto = response;        
+  },
+      errorResponse => { this.errros = errorResponse.errros;
+      this.success = false;        
+    });
+    this.success = true;
+  }
   }
 
 }

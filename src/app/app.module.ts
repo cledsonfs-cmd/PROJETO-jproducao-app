@@ -122,11 +122,10 @@ import { UnidadesService } from './services/unidades.service';
 import { UsuariosService } from './services/usuarios.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent    
   ],
   imports: [
     BrowserModule,

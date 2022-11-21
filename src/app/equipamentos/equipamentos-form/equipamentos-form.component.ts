@@ -9,11 +9,13 @@ import { EquipamentosService } from '../../services/equipamentos.service';
   styleUrls: ['./equipamentos-form.component.css']
 })
 export class EquipamentosFormComponent implements OnInit {
-
+  id: number = 0;
+  success: boolean = false;
+  errros: String[] = [];
   objeto: Equipamento = new Equipamento();
 
   constructor(
-    private equipamentosServices: EquipamentosService
+    private service: EquipamentosService
   ) { 
     
   }
@@ -22,6 +24,26 @@ export class EquipamentosFormComponent implements OnInit {
   }
 
   onSubmit(){
+    if(this.id > 0){
+      this.service
+        .update(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+        }, errorResponse => { this.errros = ['Erro ao atualizar.'];
+      });
+    }else{      
+      this.service.save(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+      this.objeto = response;        
+  },
+      errorResponse => { this.errros = errorResponse.errros;
+      this.success = false;        
+    });
+    this.success = true;
+  }
   }
 
 }

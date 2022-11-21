@@ -9,10 +9,13 @@ import { TarefasService } from '../../services/tarefas.service';
   styleUrls: ['./tarefas-form.component.css']
 })
 export class TarefasFormComponent implements OnInit {
+  id: number = 0;
+  success: boolean = false;
+  errros: String[] = [];
   objeto: Tarefa = new Tarefa();
 
   constructor(
-    private tarefasService: TarefasService
+    private service: TarefasService
   ) { 
     
   }
@@ -21,6 +24,26 @@ export class TarefasFormComponent implements OnInit {
   }
 
   onSubmit(){
+    if(this.id > 0){
+      this.service
+        .update(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+        }, errorResponse => { this.errros = ['Erro ao atualizar.'];
+      });
+    }else{      
+      this.service.save(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+      this.objeto = response;        
+  },
+      errorResponse => { this.errros = errorResponse.errros;
+      this.success = false;        
+    });
+    this.success = true;
+  }
   }
 
 }

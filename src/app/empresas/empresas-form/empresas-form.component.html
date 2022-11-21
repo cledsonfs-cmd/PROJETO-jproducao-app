@@ -3,7 +3,17 @@
     <li class="breadcrumb-item active">Cadastro</li>
 </ol>
 <div class="container">    
-    <form #empresaForm="ngForm" (ngSubmit)="onSubmit()">        
+    <form #empresaForm="ngForm" (ngSubmit)="onSubmit()">  
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="errros.length>0">
+                    {{errros}}
+                </div>
+            </div>
+        </div>      
         <div class="row">
             <div class="col-md-4">
                 <div class="input-group mb-3">
@@ -26,7 +36,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Código</span>
                     </div>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="objeto.codigoEmpresa" name="codigoEmpresa">
+                    <input type="text" class="form-control" disabled="true" [ngModel]="codigoEmpresa" name="codigoEmpresa">
                 </div>
             </div>
         </div>
@@ -36,7 +46,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Razão Social*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.razaoSocial" name="razaoSocial">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.razaoSocial" name="razaoSocial">
                 </div>
             </div>
         </div>
@@ -46,7 +56,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Nome Reduzido*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.nomeReduzido" name="nomeReduzido">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.nomeReduzido" name="nomeReduzido">
                 </div>
             </div>
             <div class="col-md-4">
@@ -80,7 +90,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Rua</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.rua" name="rua">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.rua" name="rua">
                 </div>
             </div>
         </div>
@@ -90,7 +100,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Bairro</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.bairro" name="bairro">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.bairro" name="bairro">
                 </div>
             </div>
             <div class="col-md-5">
@@ -98,7 +108,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Municipio</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.municipio" name="municipio">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.municipio" name="municipio">
                 </div>
             </div>            
             <div class="col-md-2">
@@ -106,7 +116,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">UF</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.uf" name="uf">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.uf" name="uf">
                 </div>
             </div>
         </div>
@@ -138,7 +148,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
             </div>
         </div>              

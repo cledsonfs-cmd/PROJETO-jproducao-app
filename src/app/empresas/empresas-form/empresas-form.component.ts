@@ -11,12 +11,15 @@ import { Cep } from 'src/app/tools/cep';
   styleUrls: ['./empresas-form.component.css']
 })
 export class EmpresasFormComponent implements OnInit {
-
+  id: number = 0;
+  success: boolean = false;
+  errros: String[] = [];
+  codigoEmpresa: String = "";  
   objeto: Empresa = new Empresa();
   cep: Cep = new Cep();
 
   constructor(
-    private empresasService: EmpresasService,
+    private service: EmpresasService,
     private toolsService: ToolsService
   ) { 
     
@@ -26,7 +29,28 @@ export class EmpresasFormComponent implements OnInit {
     this.formataCodigo();
   }
 
-  onSubmit(){
+  onSubmit(){    
+    if(this.id > 0){
+      this.service
+        .update(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+        }, errorResponse => { this.errros = ['Erro ao atualizar.'];
+      });
+    }else{      
+      this.service.save(this.objeto)
+        .subscribe(response => {
+          this.success = true;
+          this.errros = [];
+      this.objeto = response;  
+      this.formataCodigo();          
+  },
+      errorResponse => { this.errros = errorResponse.errros;
+      this.success = false;        
+    });
+    this.success = true;
+  }
   }
 
   localizarCep():void{
@@ -41,10 +65,8 @@ export class EmpresasFormComponent implements OnInit {
     }    
   }
 
-  formataCodigo():void{
-    if(this.objeto.codigoEmpresa == null ||  this.objeto.codigoEmpresa.length == 0){
-      this.objeto.codigoEmpresa = "E"+String(this.objeto.id).padStart(7, '0');
-    }    
+  formataCodigo():void{    
+      this.codigoEmpresa = "E"+String(this.objeto.id).padStart(7, '0');    
   }
 
 }
