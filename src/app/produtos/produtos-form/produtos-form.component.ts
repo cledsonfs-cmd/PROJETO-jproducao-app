@@ -14,8 +14,7 @@ export class ProdutosFormComponent implements OnInit {
   id: number = 0;
   success: boolean = false;
   errros: String[] = [];
-  objeto: Produto = new Produto();
-  unidadeSel: Unidade = new Unidade();
+  objeto: Produto = new Produto();  
   unidades: Unidade[] = [];
 
   constructor(
@@ -26,6 +25,7 @@ export class ProdutosFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.unidadeServide.getAll().subscribe( resposta => this.unidades = resposta);
   }
 
   onSubmit(){
@@ -52,8 +52,11 @@ export class ProdutosFormComponent implements OnInit {
   }
 
   selecionarUnidade(id: number):void{
-    this.unidadeServide.get(id).subscribe( resposta => this.unidadeSel = resposta);
-    this.objeto.unidade= this.unidadeSel;
+    this.unidades.forEach(element => {
+      if(element.id == id){
+        this.objeto.unidade = element;
+      }
+    }); 
   }
 
 }

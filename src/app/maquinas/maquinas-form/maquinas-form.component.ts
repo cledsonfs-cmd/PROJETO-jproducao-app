@@ -15,18 +15,17 @@ export class MaquinasFormComponent implements OnInit {
   success: boolean = false;
   errros: String[] = [];
   objeto: Maquina = new Maquina();
-  setorSel: Setor = new Setor();
-
   setores: Setor[] = [];
 
   constructor(
     private service: MaquinasService,
     private setoresService: SetoresService
   ) { 
-    this.setoresService.getAll().subscribe( resposta => this.setores = resposta);
+    
   }
 
   ngOnInit(): void {
+    this.setoresService.getAll().subscribe( resposta => this.setores = resposta);
   }
 
   onSubmit(){
@@ -53,8 +52,11 @@ export class MaquinasFormComponent implements OnInit {
   }
 
   selecionarSetor(id: number):void{
-    this.setoresService.get(id).subscribe( resposta => this.setorSel = resposta);
-    this.objeto.setor = this.setorSel;
+    this.setores.forEach(element => {
+      if(element.id == id){
+        this.objeto.setor = element;
+      }
+    });   
   }
 
 }

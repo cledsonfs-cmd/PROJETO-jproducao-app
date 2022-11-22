@@ -17,7 +17,7 @@ export class TipoSetoresService {
   }
 
   get(id: number): Observable<any>{
-    return this.http.get<any>(`http://localhost:8080/api/tipo-setor/${id}`);
+    return this.http.get<TipoSetor>(`http://localhost:8080/api/tipo-setor/${id}`);
   }
 
   save( objeto: TipoSetor): Observable<any>{

@@ -15,8 +15,7 @@ export class PontoControlesFormComponent implements OnInit {
   success: boolean = false;
   errros: String[] = [];
   objeto: PontoControle = new PontoControle();
-  setores: Setor[] = [];
-  setorSel: Setor = new Setor();
+  setores: Setor[] = [];  
 
   constructor(
     private service: PontoControlesService,
@@ -26,6 +25,7 @@ export class PontoControlesFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setoresService.getAll().subscribe( resposta => this.setores = resposta);
   }
 
   onSubmit(){
@@ -52,8 +52,11 @@ export class PontoControlesFormComponent implements OnInit {
   }
 
   selecionarSetor(id: number):void{
-    this.setoresService.get(id).subscribe( resposta => this.setorSel = resposta);
-    this.objeto.setor = this.setorSel;
+    this.setores.forEach(element => {
+      if(element.id == id){
+        this.objeto.setor = element;
+      }
+    });   
   }
 
 }

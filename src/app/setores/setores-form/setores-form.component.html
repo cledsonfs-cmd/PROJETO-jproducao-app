@@ -5,6 +5,16 @@
 <div class="container">    
     <form #setorForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="errros.length>0">
+                    {{errros}}
+                </div>
+            </div>
+        </div> 
+        <div class="row">
             <div class="col-md-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -24,14 +34,14 @@
             <div class="col-md-6">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</button>
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresas</button>
                       <div class="dropdown-menu">
                         <div *ngFor="let empresa of empresas">
                             <a class="dropdown-item" (click)="selecionarEmpresa(empresa.id)">{{ empresa.nomeReduzido }}</a>
                         </div>                        
                       </div>
                     </div>
-                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.empresa.nomeReduzido">
+                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.empresa.nomeReduzido" name="empresaSel">
                   </div>
             </div> 
                                                    
@@ -42,7 +52,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Código</span>
                     </div>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="objeto.codigo" name="codigoEmpresa">
+                    <input type="text" class="form-control" disabled="true" [ngModel]="codigo" name="codigo">
                 </div>
             </div>
             <div class="col-md-3">
@@ -50,7 +60,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Nome*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.descricao" name="descricao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.descricao" name="descricao">
                 </div>
             </div>
             <div class="col-md-3">
@@ -58,7 +68,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Abreviatura*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.abreviado" name="nomeReduzido">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.abreviado" name="nomeReduzido">
                 </div>
             </div> 
             <div class="col-md-4">
@@ -71,13 +81,13 @@
                         </div>                        
                       </div>
                     </div>
-                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.tipoSetor.descricao">
+                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.tipoSetor.descricao" name="setorSel">
                   </div>
             </div> 
         </div>    
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
             </div>
         </div>       

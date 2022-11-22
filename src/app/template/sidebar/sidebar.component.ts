@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Setor } from 'src/app/setores/setor';
+
+
+import { SetoresService } from '../../services/setores.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  setores: Setor[] = [];
+
+  constructor(
+    private setoresService: SetoresService
+  ) { }
 
   ngOnInit(): void {
+    this.setoresService.getAll().subscribe( resposta => this.setores = resposta);
   }
 
 }

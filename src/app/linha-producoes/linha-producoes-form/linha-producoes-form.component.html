@@ -5,6 +5,16 @@
 <div class="container">    
     <form #linhaProducaoForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="errros.length>0">
+                    {{errros}}
+                </div>
+            </div>
+        </div> 
+        <div class="row">
             <div class="col-md-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -27,7 +37,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Código1</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.codigo1" name="codigo1">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.codigo1" name="codigo1">
                 </div>
             </div>
             <div class="col-md-3">
@@ -35,7 +45,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Código2</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.codigo2" name="codigo2">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.codigo2" name="codigo2">
                 </div>
             </div>            
         </div>        
@@ -45,13 +55,13 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Descrição</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.descricao" name="descricao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.descricao" name="descricao">
                 </div>
             </div>                      
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
             </div>
         </div> 

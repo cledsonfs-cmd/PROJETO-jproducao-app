@@ -20,9 +20,7 @@ export class ProcessosFormComponent implements OnInit {
   errros: String[] = [];
   objeto: Processo = new Processo();
   empresas: Empresa[] = [];
-  setores: Setor[] = [];
-  setorSel: Setor = new Setor();
-  empresaSel: Empresa = new Empresa();
+  setores: Setor[] = [];  
 
   constructor(
     private service: ProcessosService,
@@ -33,6 +31,8 @@ export class ProcessosFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.empresasService.getAll().subscribe( resposta => this.empresas = resposta);
+    this.setoresService.getAll().subscribe( resposta => this.setores = resposta);
   }
 
   onSubmit(){
@@ -58,14 +58,19 @@ export class ProcessosFormComponent implements OnInit {
   }
   }
 
-  selecionarSetor(id: number):void{
-    this.setoresService.get(id).subscribe( resposta => this.setorSel = resposta);
-    this.objeto.setor = this.setorSel;
-  }
-
   selecionarEmpresa(id: number):void{
-    this.empresasService.get(id).subscribe( resposta => this.empresaSel = resposta);
-    this.objeto.empresa = this.empresaSel;
+    this.empresas.forEach(element => {
+      if(element.id == id){
+        this.objeto.empresa = element;
+      }
+    });   
   }
 
+  selecionarSetor(id: number):void{
+    this.setores.forEach(element => {
+      if(element.id == id){
+        this.objeto.setor = element;
+      }
+    });   
+  }
 }

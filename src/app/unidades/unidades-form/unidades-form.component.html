@@ -5,6 +5,16 @@
 <div class="container">    
     <form #unidadeForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="errros.length>0">
+                    {{errros}}
+                </div>
+            </div>
+        </div> 
+        <div class="row">
             <div class="col-md-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -28,7 +38,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Descricção*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.descricao" name="descricao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.descricao" name="descricao">
                 </div>
             </div>
             <div class="col-md-3">
@@ -36,7 +46,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Abreviação*</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.abreviacao" name="abreviacao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.abreviacao" name="abreviacao">
                 </div>
             </div>
             <div class="col-md-4">
@@ -50,7 +60,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
             </div>
         </div>       

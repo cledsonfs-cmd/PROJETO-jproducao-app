@@ -5,6 +5,16 @@
 <div class="container">    
     <form #processoForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="errros.length>0">
+                    {{errros}}
+                </div>
+            </div>
+        </div> 
+        <div class="row">
             <div class="col-md-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -33,7 +43,7 @@
                         </div>                        
                       </div>
                     </div>
-                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.empresa.nomeReduzido">
+                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.empresa.nomeReduzido" name="empresaSel">
                   </div>
             </div>                                       
             <div class="col-md-6">
@@ -42,11 +52,11 @@
                       <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Setor</button>
                       <div class="dropdown-menu">
                         <div *ngFor="let setor of setores">
-                            <a class="dropdown-item" (click)="selecionarEmpresa(setor.id)">{{ setor.descricao }}</a>
+                            <a class="dropdown-item" (click)="selecionarSetor(setor.id)">{{ setor.descricao }}</a>
                         </div>                        
                       </div>
                     </div>
-                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.setor.descricao">
+                    <input type="text" class="form-control" disabled="true" aria-label="Selecione o setorno combo ao lado" [ngModel]="objeto.setor.descricao" name="setorSel">
                   </div>
             </div>    
         </div>   
@@ -56,7 +66,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Descrição</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.descricao" name="descricao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.descricao" name="descricao">
                 </div>
             </div>   
         </div>
@@ -76,13 +86,13 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Observação</span>
                     </div>
-                    <input type="text" class="form-control" [(ngModel)]="objeto.observacao" name="observacao">
+                    <input type="text" class="form-control text-uppercase" [(ngModel)]="objeto.observacao" name="observacao">
                 </div>
             </div>   
         </div>     
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="reset" class="btn btn-secondary ml-1">Limpar</button>
             </div>
         </div>      

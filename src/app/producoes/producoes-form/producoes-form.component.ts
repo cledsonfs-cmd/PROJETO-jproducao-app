@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producao } from '../producao';
 import { ProducoesService } from '../../services/producoes.service';
 
+
 @Component({
   selector: 'app-producoes-form',
   templateUrl: './producoes-form.component.html',

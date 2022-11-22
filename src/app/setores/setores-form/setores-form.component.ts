@@ -14,11 +14,10 @@ import { TipoSetoresService } from '../../services/tipo-setores.service';
 })
 export class SetoresFormComponent implements OnInit {
   id: number = 0;
+  codigo:String = "";
   success: boolean = false;
   errros: String[] = [];
-  objeto: Setor = new Setor();
-  empresaSel: Empresa = new Empresa();
-  tipoSetorSel: TipoSetor = new TipoSetor();
+  objeto: Setor = new Setor();  
   empresas: Empresa[] = [];
   tipoSetores: TipoSetor[] = [];
 
@@ -31,10 +30,14 @@ export class SetoresFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.empresasService.getAll().subscribe( resposta => this.empresas = resposta);
+    this.tipoSetoresService.getAll().subscribe( resposta => this.tipoSetores = resposta);
     this.formataCodigo();
   }
 
   onSubmit(){
+    
+    console.log(this.objeto.tipoSetor.id)
     if(this.id > 0){
       this.service
         .update(this.objeto)
@@ -58,19 +61,23 @@ export class SetoresFormComponent implements OnInit {
   }
 
   selecionarEmpresa(id: number):void{
-    this.empresasService.get(id).subscribe( resposta => this.empresaSel = resposta);
-    this.objeto.empresa = this.empresaSel;
+    this.empresas.forEach(element => {
+      if(element.id == id){
+        this.objeto.empresa = element;
+      }
+    });   
   }
 
   selecionarTipoSetor(id: number):void{
-    this.tipoSetoresService.get(id).subscribe( resposta => this.tipoSetorSel = resposta);
-    this.objeto.tipoSetor = this.tipoSetorSel;
+    this.tipoSetores.forEach(element => {
+      if(element.id == id){
+        this.objeto.tipoSetor = element;
+      }
+    });   
   }
 
-  formataCodigo():void{
-    if(this.objeto.codigo == null ||  this.objeto.codigo.length == 0){
-      this.objeto.codigo = "S"+String(this.objeto.id).padStart(3, '0');
-    }    
+  formataCodigo():void{    
+      this.codigo = "S"+String(this.objeto.id).padStart(3, '0');    
   }
 
 }
